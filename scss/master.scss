@@ -1,0 +1,498 @@
+@import 'variables.scss';
+
+@font-face {
+  font-family: 'Sailec Regular';
+  font-weight: normal;
+  src: url('../assets/fonts/sailecregular.woff') format('woff'), url('../assets/fonts/sailecregular.woff2') format('woff2'),;
+}
+
+@font-face {
+  font-family: 'Sailec Medium';
+  font-weight: bold;
+  src: url('../assets/fonts/sailecmedium.woff') format('woff'), url('../assets/fonts/sailecmedium.woff2') format('woff2'),;
+}
+
+@font-face {
+  font-family: 'Sailec Bold';
+  font-weight: bolder;
+  src: url('../assets/fonts/sailecbold.woff') format('woff'), url('../assets/fonts/sailecbold.woff2') format('woff2'),;
+}
+
+@font-face {
+  font-family: 'Akkordeon Three';
+  font-weight: bolder;
+  src: url('../assets/fonts/akkordeon.woff') format('woff'), url('../assets/fonts/akkordeon.woff2') format('woff2');
+}
+
+/* 	For large screen sizes, scale the the typography and layout to screen width.
+	This means all margins, padding and font-sizes should be relative to the base size i.e. 1rem */
+
+html {
+	font-size: 16px;
+	line-height: 1.4em;
+	font-family: 'Sailec Regular', sans-serif;
+	color: $navy;
+}
+
+@media screen and (min-width: 1541px) {
+	html {
+		font-size: 1.05vw;
+	}
+}
+
+@media screen and (max-height: 600px) {
+	html {
+		font-size: 0.9rem;
+	}
+}
+
+/* Typography */
+
+h1 {
+	font-family: 'Sailec Medium';
+	font-size: 2.375rem;
+	line-height: 3.325rem;
+	padding-bottom: 1.25rem;
+	font-weight: bold;
+}
+
+h2 {
+	font-family: 'Sailec Medium';
+	font-size: 2rem;
+	line-height: 2.8rem;
+	padding-bottom: 1.25rem;
+	font-weight: bold;
+}
+
+h3 {
+	font-family: 'Sailec Medium';
+	font-size: 1.5rem;
+	line-height: 2.1rem;
+	padding-bottom: 1.25rem;
+	font-weight: bold;
+}
+
+h4 {
+	font-family: 'Sailec Medium';
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	padding-bottom: 1.25rem;
+	font-weight: bold;
+}
+
+h5 {
+	font-family: 'Sailec Medium';
+	font-size: 1rem;
+	line-height: 1.4rem;
+	font-weight: bold;
+}
+
+@media screen and (max-width: $small-desktop-break){
+	h1 {
+		font-size: 2rem;
+		line-height: 2.8rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		line-height: 2.1rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+	}
+}
+
+p {
+	font-family: 'Sailec Regular';
+	font-size: 1rem;
+	line-height: 1.4rem;
+	padding-bottom: 1.25rem;
+}
+
+a.unstyled {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: underline;
+	color: inherit;
+	transition: color 0.25s ease;
+}
+
+a:hover {
+	color: $orange;
+}
+
+.small-text {
+	font-size: 0.875rem;
+	line-height: 1rem;
+}
+
+.nested-text {
+	font-size: 1rem;
+	display: inline;
+	font-family: 'Sailec Regular';
+}
+
+.slate {
+	color: $slate;
+}
+
+.aqua {
+	color: $aqua;
+}
+
+.navy {
+	color: $navy;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+.rounded-button {
+	border-radius: 1.25rem;
+	border: 1px solid;
+	height: 2.5rem;
+	display: inline-block;
+	transition: all 0.25s ease;
+}
+
+.rounded-button a {
+	text-decoration: none;
+	color: $white;
+	display: inline-block;
+	line-height: 2.5rem;
+	padding: 0.125rem 2.5rem 0 2.5rem;
+}
+
+.orange-button {
+	border-color: $orange;
+	background-color: $orange;
+	color: #fff;
+}
+
+.navy-button {
+	border-color: $navy;
+	background-color: $navy;
+	color: #fff;
+}
+
+.white-button {
+	border-color: $navy;
+	background-color: #fff;
+	transition: all 0.25s ease;
+	
+	a {
+		color: $navy;
+		transition: color 0.25s ease;
+	}
+}
+
+.white-button:hover {
+	background-color: $navy;
+	a {
+		color: #fff;
+	}
+}
+
+@media screen and (max-width: $mobile-break){
+	.rounded-button {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+
+/*	Setting up the basic layout templating system */
+
+.flex-grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	margin: 0px auto;
+}
+
+.column-12 {
+	grid-column: span 12;
+}
+
+.column-11 {
+	grid-column: span 11;
+}
+
+.column-10 {
+	grid-column: span 10;
+}
+
+.column-9 {
+	grid-column: span 9;
+}
+
+.column-8 {
+	grid-column: span 8;
+}
+
+.column-7 {
+	grid-column: span 7;
+}
+
+.column-6 {
+	grid-column: span 6;
+}
+
+.column-5 {
+	grid-column: span 5;
+}
+
+.column-4 {
+	grid-column: span 4;
+}
+
+.column-3 {
+	grid-column: span 3;
+}
+
+.column-2 {
+	grid-column: span 2;
+}
+
+.column-1 {
+	grid-column: span 1;
+}
+
+.column-hide {
+	display: none;
+}
+
+// Small Desktop Grid 
+
+@media screen and (max-width: $small-desktop-break){
+
+	.lg-column-12 {
+		grid-column: span 12;
+	}
+
+	.lg-column-11 {
+		grid-column: span 11;
+	}
+
+	.lg-column-10 {
+		grid-column: span 10;
+	}
+
+	.lg-column-9 {
+		grid-column: span 9;
+	}
+
+	.lg-column-8 {
+		grid-column: span 8;
+	}
+
+	.lg-column-7 {
+		grid-column: span 7;
+	}
+
+	.lg-column-6 {
+		grid-column: span 6;
+	}
+
+	.lg-column-5 {
+		grid-column: span 5;
+	}
+
+	.lg-column-4 {
+		grid-column: span 4;
+	}
+
+	.lg-column-3 {
+		grid-column: span 3;
+	}
+
+	.lg-column-2 {
+		grid-column: span 2;
+	}
+
+	.lg-column-1 {
+		grid-column: span 1;
+	}
+
+	.lg-column-hide {
+		display: none;
+	}
+}
+
+// Tablet Grid
+
+@media screen and (max-width: $tablet-break){
+
+	.md-column-12 {
+		grid-column: span 12;
+	}
+
+	.md-column-11 {
+		grid-column: span 11;
+	}
+
+	.md-column-10 {
+		grid-column: span 10;
+	}
+
+	.md-column-9 {
+		grid-column: span 9;
+	}
+
+	.md-column-8 {
+		grid-column: span 8;
+	}
+
+	.md-column-7 {
+		grid-column: span 7;
+	}
+
+	.md-column-6 {
+		grid-column: span 6;
+	}
+
+	.md-column-5 {
+		grid-column: span 5;
+	}
+
+	.md-column-4 {
+		grid-column: span 4;
+	}
+
+	.md-column-3 {
+		grid-column: span 3;
+	}
+
+	.md-column-2 {
+		grid-column: span 2;
+	}
+
+	.md-column-1 {
+		grid-column: span 1;
+	}
+
+	.md-column-hide {
+		display: none;
+	}
+}
+
+// Mobile Grid
+
+@media screen and (max-width: $mobile-break){
+
+	.sm-column-12 {
+		grid-column: span 12;
+	}
+
+	.sm-column-11 {
+		grid-column: span 11;
+	}
+
+	.sm-column-10 {
+		grid-column: span 10;
+	}
+
+	.sm-column-9 {
+		grid-column: span 9;
+	}
+
+	.sm-column-8 {
+		grid-column: span 8;
+	}
+
+	.sm-column-7 {
+		grid-column: span 7;
+	}
+
+	.sm-column-6 {
+		grid-column: span 6;
+	}
+
+	.md-column-5 {
+		grid-column: span 5;
+	}
+
+	.sm-column-4 {
+		grid-column: span 4;
+	}
+
+	.sm-column-3 {
+		grid-column: span 3;
+	}
+
+	.sm-column-2 {
+		grid-column: span 2;
+	}
+
+	.sm-column-1 {
+		grid-column: span 1;
+	}
+
+	.sm-column-hide {
+		display: none;
+	}
+}
+
+// Small Desktop Order Classes 
+@media screen and (max-width: $small-desktop-break){
+
+	.lg-order-0 {
+		order: 0;
+	}
+
+	.lg-order-1 {
+		order: 1;
+	}
+
+	.lg-order-2 {
+		order: 2;
+	}
+
+	.lg-order-3 {
+		order: 3;
+	}
+}
+
+// Tablet Order Classes 
+@media screen and (max-width: $tablet-break){
+
+	.md-order-0 {
+		order: 0;
+	}
+
+	.md-order-1 {
+		order: 1;
+	}
+
+	.md-order-2 {
+		order: 2;
+	}
+
+	.md-order-3 {
+		order: 3;
+	}
+}
+
+// Mobile Order Classes 
+@media screen and (max-width: $mobile-break){
+
+	.sm-order-0 {
+		order: 0;
+	}
+
+	.sm-order-1 {
+		order: 1;
+	}
+
+	.sm-order-2 {
+		order: 2;
+	}
+
+	.sm-order-3 {
+		order: 3;
+	}
+}

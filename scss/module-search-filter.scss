@@ -1,0 +1,458 @@
+@import 'variables.scss';
+
+.search-filter {
+	padding: 0 2.5rem;
+	border-bottom: 1px solid $light-grey;
+}
+
+.search-results-title {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 3.75rem;
+
+	h2 {
+		padding-bottom: 0;
+		padding-top: 0.125rem;
+	}
+}
+
+.search-filter-controls {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	height: 3.75rem;
+}
+
+.refine-results-control .rounded-button {
+	
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	.button-text {
+		padding: 0.125rem 0 0 2.5rem;
+	}	
+
+	.button-icon {
+		padding: 0.125rem 2.5rem 0 1.25rem;
+
+		svg {
+			width: 1.25rem;
+			height: 1.25rem;
+		}
+	}
+
+	path, g {
+		transition: 0.05s fill ease;
+	}
+}
+
+.refine-results-control .rounded-button:hover, .refine-results-control .rounded-button.active {
+	background-color: transparent;
+	border: 1px solid $navy;
+	color: $navy;
+
+	path, g {
+		fill: $navy;
+	}
+}
+
+.toggle-button-container {
+	background-color: $light-grey;
+	height: 2.5rem;
+	border-radius: 1.25rem;
+	margin-left: 1.25rem;
+	display: inline-flex;
+	align-items: center;
+	padding: 0 1px;
+
+	.toggle-button {
+		color: $white;
+		padding: 0.125rem 2.5rem 0 2.5rem;
+		transition: 0.25s ease color;
+		cursor: pointer;
+		height: 2.25rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		&:hover {
+			color: $navy;
+		}
+	}
+
+	.toggle-button.active {
+		background-color: $white;
+		color: $navy;
+		border-radius: 1.25rem;
+	}
+}
+
+/* Filter Dialogue Styles */
+
+.search-filter-dialogue.active {
+	display: block;
+}
+
+.search-filter-dialogue {
+	display: none;
+	position: absolute;
+	height: 100%;
+	z-index: 100;
+	width: 100%;
+	background-color: rgba(0,0,0,0.6);
+
+	.filter-box {
+		margin: 1.25rem;
+		padding: 1.25rem;
+		background-color: $white;
+		border: 1px solid $light-grey;
+		border-radius: 0.75rem;
+
+		.main-filters {
+			margin: 0 -0.75rem;
+		}
+
+		.filter-item {
+			display: flex;
+			flex-direction: column;
+			margin: 0 0.75rem;
+			position: relative;
+
+			label {
+				font-weight: bold;
+			}
+
+			select {
+				margin-top: 1rem;
+				display: block;
+				font-size: 1rem;
+				font-family: 'Sailec Regular', sans-serif;
+				color: $navy;
+				line-height: 2rem;
+				padding: 0.75rem 2rem;
+				outline: 0;
+				width: 100%;
+				max-width: 100%; 
+				box-sizing: border-box;
+				border: 1px solid $light-grey;
+				border-radius: 5rem;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				appearance: none;
+				background-color: #fff;
+				cursor: pointer;
+			}
+
+			select:hover, select:active {
+				border-color: $navy;
+			}
+
+			.dropdown-arrow {
+				position: absolute;
+				right: 1.25rem;
+				top: 3.25rem;
+
+				svg {
+					path {
+						stroke: $navy;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $small-desktop-break){
+	.search-filter-dialogue {
+		.filter-box {
+			.filter-item {
+				margin-bottom: 1rem;
+				text-align: center;
+
+				select {
+					margin-top: 0.5rem;
+					padding: 0.5rem 1.5rem;
+				}
+				.dropdown-arrow {
+					top: 2.5rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile-break){
+	.search-filter-dialogue {
+		.filter-box {
+			.filter-item {
+				margin-bottom: 1rem;
+				text-align: center;
+
+				select {
+					margin-top: 0.5rem;
+					padding: 0.5rem 1rem;
+					font-size: 0.9rem
+				}
+				.dropdown-arrow {
+					top: 2.5rem;
+					right: 0.5rem;
+				}
+			}
+		}
+	}
+}
+
+.filter-by-brand {
+	margin-top: 1.25rem;
+
+	.filter-by-brand-element {
+		
+		.letters-row {
+			display: flex;
+			width: 100%;
+			justify-content: space-around;
+			border: 1px solid $light-grey;
+			border-radius: 3rem;
+			margin: 1rem 0;
+
+			.letter {
+				border-right: 1px solid $light-grey;
+				width: calc(100% / 27);
+				text-align: center;
+				padding: 1rem 0;
+			}
+
+			.letter:last-of-type {
+				border-right: none;
+				border-top-right-radius: 1.5rem;
+				border-bottom-right-radius: 1.5rem;
+			}
+
+			.letter:first-of-type {
+				border-top-left-radius: 1.5rem;
+				border-bottom-left-radius: 1.5rem;
+			}
+
+			.letter:hover, .letter.active {
+				background-color: $navy;
+				cursor: pointer;
+
+				span {
+					color: #fff;
+				}
+			}
+		}
+
+		.letters-row.expanded {
+			border-top-right-radius: 1.5rem;
+			border-top-left-radius: 1.5rem;
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+
+			.letter:last-of-type {
+				border-bottom-right-radius: 0;
+			}
+
+			.letter:first-of-type {
+				border-bottom-left-radius: 0;
+			}
+		}
+	}
+	
+	.brand-names-section.visible {
+		display: block;
+	}
+	
+	.brand-names-section {
+		
+		display: none;
+		padding: 1.25rem;
+		border: 1px solid $light-grey;
+		border-top: 0;
+		border-bottom-right-radius: 1.5rem;
+		border-bottom-left-radius: 1.5rem;
+		margin-top: -1rem;
+		width: calc(100% - 2.5rem);
+
+
+		.brand-query-results {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+
+			ul {
+				li {
+					padding-bottom: 0.5rem;
+					cursor: pointer;
+				}
+
+				li:hover {
+					color: $orange;
+				}
+
+				li:last-child {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $small-desktop-break){
+	.filter-by-brand {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: $tablet-break){
+	.filter-by-brand {
+		display: none;
+	}
+}
+
+/* This changes the image/list display to a select element instead of a discreet element to save space on mobile */
+
+.mobile-display-toggle {
+	display: none;
+}
+
+/* This replaces the need for the brand section which is too complex for mobile */
+
+.mobile-brand-link {
+	display: none;
+}
+
+@media screen and (max-width: $tablet-break){
+	.mobile-brand-link {
+		display: block;
+		text-align: center;
+
+		.rounded-button {
+			width: 100%;
+			margin-top: 1rem;
+
+			a {
+				color: $navy;
+			}
+		}
+	}
+}
+
+/* Fix Filter elements on scroll */
+
+.search-filter.scrolled {
+	position: fixed;
+	width: calc(100% - 5rem);
+	background-color: $white;
+	top: 7.6rem;
+	z-index: 200;
+}
+
+.search-filter-dialogue.scrolled {
+	position: fixed;
+	top: 11.4rem;
+	z-index: 200;
+}
+
+@media screen and (max-width: $small-desktop-break){
+	.search-filter.scrolled {
+		top: 7.2rem;
+	}
+
+	.search-filter-dialogue.scrolled {
+		top: 14.75rem;
+	}
+}
+
+@media screen and (max-width: $tablet-break){
+
+	.search-filter.scrolled {
+		top: 4.4rem;
+		width: calc(100% - 2.5rem);
+	}
+
+	.search-filter-dialogue.scrolled {
+		top: 12rem;
+	}
+}
+
+
+@media screen and (max-width: $mobile-break){
+
+	.search-filter.scrolled {
+		top: 3.8rem;
+		width: calc(100% - 2.5rem);
+	}
+
+	.search-filter-dialogue.scrolled {
+		top: 11.5rem;
+	}
+}
+
+/* Media Queries */
+
+@media screen and (max-width: $small-desktop-break) {
+	.search-results-title {
+		text-align: center;
+	}
+
+	.search-filter-controls {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: $tablet-break) { 
+
+	.refine-results-control {
+		width: 100%;
+	}
+	
+	.search-filter {
+		padding: 0 1.25rem;
+	}
+
+	.toggle-button-container {
+		margin-left: 0;
+	}
+
+	.search-filter-controls {
+		flex-direction: column;
+	}
+	.search-filter-controls {
+		height: auto;
+	}
+	.display-results-control {
+		display: none;
+	}
+	.mobile-display-toggle {
+		display: block;
+	}
+	.refine-results-control, .toggle-button-container {
+		margin-bottom: 1.25rem;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: $mobile-break) { 
+
+	.toggle-button-container {
+		width: 100%;
+		justify-content: space-between;
+	}
+	.toggle-button-container .toggle-button {
+		white-space: nowrap;
+		padding: 0.125rem 1.25rem 0  1rem;
+	}
+}
+
+@media screen and (max-width: 350px) { 
+	.toggle-button-container .toggle-button {
+		padding: 0.125rem 1rem 0  1rem;
+		font-size: 0.9rem;
+	}
+}

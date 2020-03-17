@@ -14,8 +14,8 @@ var replace = require('gulp-replace');
 
 // File paths
 const files = { 
-    scssPath: 'app/scss/**/*.scss',
-    jsPath: 'app/js/**/*.js'
+    scssPath: 'scss/**/*.scss',
+    jsPath: 'js/*.js'
 }
 
 // Sass task: compiles the style.scss file into style.css
@@ -25,7 +25,7 @@ function scssTask(){
         .pipe(sass()) // compile SCSS to CSS
         .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
-        .pipe(dest('dist')
+        .pipe(dest('css')
     ); // put final CSS in dist folder
 }
 
@@ -36,17 +36,8 @@ function jsTask(){
         //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
         ])
         .pipe(concat('all.js'))
-        .pipe(uglify())
-        .pipe(dest('dist')
+        .pipe(dest('js/min')
     );
-}
-
-// Cachebust
-var cbString = new Date().getTime();
-function cacheBustTask(){
-    return src(['index.html'])
-        .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
-        .pipe(dest('.'));
 }
 
 
@@ -55,8 +46,8 @@ function cacheBustTask(){
 function watchTask(){
     watch([files.scssPath, files.jsPath], 
         series(
-            parallel(scssTask, jsTask),
-            cacheBustTask
+            scssTask, 
+            jsTask
         )
     );    
 }
@@ -65,7 +56,7 @@ function watchTask(){
 // Runs the scss and js tasks simultaneously
 // then runs cacheBust, then watch task
 exports.default = series(
-    parallel(scssTask, jsTask), 
-    cacheBustTask,
+    scssTask, 
+    jsTask, 
     watchTask
 );
