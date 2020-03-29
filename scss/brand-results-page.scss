@@ -42,7 +42,7 @@
 	}
 
 	.brand-intro {
-		padding: 2.5rem;
+		padding: 1.25rem;
 		padding-top: 0;
 	}
 }
@@ -132,6 +132,10 @@
 	margin-top: 2rem;
 }
 
+.results-list-navigation {
+	margin-top: 2rem;
+}
+
 .results-list-navigation-element {
 	display: flex;
 	justify-content: center;
@@ -145,6 +149,10 @@
 		border: 1px solid $light-grey;
 		background-color: $white;
 		cursor: pointer;
+
+		&:hover {
+			background-color: $off-white;
+		}
 	}
 
 	.previous-page-link {
@@ -195,7 +203,12 @@
 				border-right: 0;
 			}
 
-			li:hover, li.current-page {
+			li:hover {
+				background-color: $off-white;
+				color: $navy;
+			}
+
+			li.current-page {
 				background-color: $navy;
 				color: $white;
 			}

@@ -37,6 +37,7 @@ $('img.button-svg').each(function(){
 $('.mobile-menu-bars').click(function(){
     $(this).toggleClass('open');
     $('.page-navigation-container').toggleClass('open');
+    $('.mobile-menu-element').toggleClass('active');
 });
 
 $('.mobile-menu-toggle').click(function(){
@@ -84,7 +85,11 @@ if($('.site-header').next().hasClass('background-color')){
 
 $(window).on('scroll', function() {
     var y_scroll_pos = window.pageYOffset;
-    var scroll_pos = 130;
+    if($(window).width() < 740 ){
+        var scroll_pos = 40;
+    } else {
+      var scroll_pos = 130;  
+    }
     
     if($('.navigation-search-bar').hasClass('transparent-bg')){
         var transparentHeader = true;
@@ -196,6 +201,29 @@ $('.toggle-button').click(function(){
 });
 
 /* Mobile + Tablet Specific header scripts */
+$('.mobile-link-wrapper .button-wrapper').click(function(){
+    $(this).closest('.mobile-nav-item').find('.mobile-sub-menu').toggleClass('active');
+    $(this).find('.button-svg').toggleClass('flipped');
+});
 
+$('.mobile-currency-select').click(function(){
+    $(this).find('.currency-dropdown').toggleClass('active');
+});
 
+$('.current-language').click(function(){
+    $(this).find('.language-dropdown').toggleClass('active');
+    console.log('yo');
+});
 
+// Example functionality to display results list
+$( ".main-header-search-input" ).change(function() {
+  
+    if($('.main-header-search-input').val() == ''){
+        $('.default-appearance').removeClass('hidden');
+        $('.display-results').removeClass('active');
+    } else {
+        $('.default-appearance').addClass('hidden');
+        $('.display-results').addClass('active');
+    }
+
+});
