@@ -156,16 +156,17 @@ strong, b {
 	border-radius: 1.25rem;
 	border: 1px solid;
 	height: 2.5rem;
-	display: inline-block;
+	display: inline-flex;
 	transition: all 0.25s ease;
+	justify-content: center;
+	align-items: center;
 }
 
 .rounded-button a {
 	text-decoration: none;
 	color: $white;
 	display: inline-block;
-	line-height: 2.5rem;
-	padding: 0.125rem 2.5rem 0 2.5rem;
+	padding: 0.25rem 2.5rem 0 2.5rem;
 }
 
 .orange-button {

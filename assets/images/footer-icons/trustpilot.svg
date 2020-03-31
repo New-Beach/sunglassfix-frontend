@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="21px" viewBox="0 0 23 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.0644525 22.4094609 0.0644525 22.4094609 20.8477858 0 20.8477858"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Footer" transform="translate(-1017.000000, -481.000000)">
+            <g id="Group-2" transform="translate(1017.000000, 481.000000)">
+                <g id="Group-6">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-5"></g>
+                    <polygon id="Fill-4" fill="#A5E0F0" mask="url(#mask-2)" points="22.4094609 8.00723028 13.8520637 8.00723028 11.2088522 0.0644525 8.55738069 8.00723028 -1.65200718e-05 7.99917472 6.93015361 12.9130636 4.27868208 20.8477858 11.2088522 15.9419525 18.1307623 20.8477858 15.4875508 12.9130636"></polygon>
+                </g>
+                <polygon id="Fill-7" fill="#FFFFFF" points="16.0823064 14.7094283 15.4875839 12.9130394 11.2088853 15.9419283"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
