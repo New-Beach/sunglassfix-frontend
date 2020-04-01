@@ -49,35 +49,14 @@
 
 /* Results Display Section */
 
-.results-display-section.scrolled {
-	padding-top: 6rem;
-}
-
-@media screen and (max-width: $small-desktop-break){
-	.results-display-section.scrolled {
-		padding-top: 9rem;
-	}
-}
-
-@media screen and (max-width: $tablet-break){
-	.results-display-section.scrolled {
-		padding-top: 12rem;
-	}
-}
-
-@media screen and (max-width: $mobile-break){
-	.results-display-section.scrolled {
-		padding-top: 10rem;
-	}
+.results-display-section.hidden {
+	display: none;
 }
 
 .results-display-section {
+	display: block;
 	background-color: $off-white;
-	padding: 2.5rem 1.25rem;
-
-	.column-3 {
-		margin: 0 1.25rem 1.25rem 1.25rem;
-	}
+	padding: 1rem;
 
 	.results-item:hover {
 		border-color: $navy;
@@ -226,6 +205,7 @@
 
 @media screen and (max-width: $tablet-break) {
 	.results-list-navigation-element {
+		padding-bottom: 2.5rem;
 		.page-numbers {
 			display: none;
 		}
@@ -235,13 +215,55 @@
 	}
 }
 
+@media screen and (max-width: $mobile-break) {
+	.results-list-navigation-element {
+		.previous-page-link, .next-page-link {
+			padding: 0 0.5rem;
+		}
+	}
+}
+
+
+.lens-results-grid {
+	
+	.lens-results-column {
+		grid-column: span 3;
+		margin: 0.75rem;
+	}
+
+	@media screen and (max-width: $small-desktop-break){
+		
+		.lens-results-column {
+			grid-column: span 4;
+			margin: 0.75rem;
+		}
+	}
+
+	@media screen and (max-width: 890px){
+		.lens-results-column {
+			grid-column: span 6;
+			margin: 0.75rem;
+		}
+	}
+
+	@media screen and (max-width: 580px){
+		.lens-results-column {
+			grid-column: span 12;
+			margin: 0.75rem;
+		}
+	}
+}
+
+@media screen and (max-width: 890px){
+	.results-display-section {
+		padding: 0;
+	}
+}
+
+
 
 @media screen and (max-width: 1270px){
 	.results-display-section {
-		padding: 1rem 0.5rem;
-		.column-3{
-			margin: 0 0.5rem 0.5rem 0.5rem;
-		}
 		.results-item {
 			.results-item-content {
 				.product-image-container{
@@ -254,10 +276,30 @@
 
 @media screen and (max-width: $small-desktop-break){
 	.results-display-section {
-		padding: 2rem 1rem;
-		.column-3{
-			margin: 0 1rem 1rem 1rem;
+		.results-item {
+			.results-item-content {
+				.product-image-container{
+					max-height: 8rem;
+				}
+			}
 		}
+	}
+}
+
+@media screen and (max-width: 980px){
+	.results-display-section {
+		.results-item {
+			.results-item-content {
+				.product-image-container{
+					max-height: 6rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 890px){
+	.results-display-section {
 		.results-item {
 			.results-item-content {
 				.product-image-container{
@@ -270,14 +312,33 @@
 
 @media screen and (max-width: $tablet-break){
 	.results-display-section {
-		padding: 4rem 2rem;
-		.column-3{
-			margin: 0 2rem 2rem 2rem;
-		}
 		.results-item {
 			.results-item-content {
 				.product-image-container{
-					height: 10rem;
+					max-height: 8rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 670px){
+	.results-display-section {
+		.results-item {
+			.results-item-content {
+				.product-image-container{
+					max-height: 6rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 580px){
+	.results-display-section {
+		.results-item {
+			.results-item-content {
+				.product-image-container{
 					max-height: 10rem;
 				}
 			}
@@ -285,22 +346,55 @@
 	}
 }
 
-@media screen and (max-width: $mobile-break){
-	.results-display-section {
-		padding: 2rem 0.5rem;
-		.column-3{
-			margin: 0 1rem 1rem 1rem;
-		}
-		.results-item {
-			.results-item-content {
-				.product-image-container{
-					height: 10rem;
-					max-height: 10rem;
-				}
+
+/* Display by name Section */
+
+.results-display-by-name.hidden {
+	display: none;
+}
+
+.results-display-by-name {
+	padding: 2.5rem;
+	background-color: $off-white;
+	display: block;
+
+	.results-list-names {
+		li {
+			padding-bottom: 0.5rem;
+			padding-right: 1rem;
+			a {
+				text-decoration: none;
 			}
 		}
-		.results-list-navigation {
-			padding: 0 1rem;
-		}
+	}
+
+	.results-list-navigation {
+		padding: 0;
 	}
 }
+
+/* Add padding to results when filter becomes fixed */
+
+
+.results-display-section.scrolled, .results-display-by-name.scrolled {
+	padding-top: 5rem;
+}
+
+@media screen and (max-width: $small-desktop-break){
+	.results-display-section.scrolled, .results-display-by-name.scrolled {
+		padding-top: 8rem;
+	}
+}
+
+@media screen and (max-width: $tablet-break){
+	.results-display-section.scrolled, .results-display-by-name.scrolled {
+		padding-top: 8rem;
+	}
+}
+
+@media screen and (max-width: $mobile-break){
+	.results-display-section.scrolled, .results-display-by-name.scrolled {
+		padding-top: 10rem;
+	}
+}
+

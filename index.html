@@ -528,7 +528,7 @@
 					<div class="brand-intro-container">
 						<article class="brand-intro">
 							<!-- Insert Brand Copy here -->
-							<h1>Oakley Replacement Lenses by Sunglass Fix</h1>
+							<h1>Oakley Replacement Lenses<br /> by Sunglass Fix</h1>
 							<p>You will be amazed at what a new pair of replacement lenses will do for your favourite pair of Oakley sunglasses. You can rest assured that our <a href="#">high quality Polyamide lenses</a> are as good if not better than your original lenses. We Guarantee it.</p>
 							<!-- This link will be tied to a JS event that opens the main search in the header -->
 							<div class="rounded-button orange-button activate-search-dialogue"><a href="#">Search for your lenses</a></div>
@@ -592,9 +592,10 @@
 							<div class="filter-item">
 								<label for="frame-material">Frame Material</label>
 								<select name="frame-material" class="search-filter-select">
-									<option>Any Material</option>
-									<option>Hard Plastic</option>
+									<option>All Materials</option>
+									<option>Plastic</option>
 									<option>Metal</option>
+									<option>Other</option>
 								</select>
 								<div class="dropdown-arrow">
 									<img src="assets/images/arrow-down.svg" class="button-svg" />
@@ -603,9 +604,9 @@
 						</div>
 						<div class="column-3 md-column-6 lg-column-4">
 							<div class="filter-item">
-								<label for="frame-material">Lens Shape</label>
+								<label for="frame-material">Frame Shape</label>
 								<select name="frame-material" class="search-filter-select">
-									<option>Any Shape</option>
+									<option>All Shapes</option>
 									<option>Round</option>
 									<option>Wayfarer</option>
 									<option>Square</option>
@@ -621,12 +622,13 @@
 							<div class="filter-item">
 								<label for="frame-material">Lens Size</label>
 								<select name="frame-material" class="search-filter-select">
-									<option>Any Size</option>
-									<option>< 50mm</option>
-									<option>52mm - 54mm</option>
-									<option>55mm - 57mm</option>
-									<option>58mm - 60mm</option>
-									<option>> 60mm</option>
+									<option>All Sizes</option>
+									<option>< 45mm</option>
+									<option>46mm - 50mm</option>
+									<option>51mm - 55mm</option>
+									<option>56mm - 60mm</option>
+									<option>61mm - 65mm</option>
+									<option>> 66mm</option>
 								</select>
 								<div class="dropdown-arrow">
 									<img src="assets/images/arrow-down.svg" class="button-svg" />
@@ -637,10 +639,10 @@
 							<div class="filter-item">
 								<label for="frame-material">Results per page</label>
 								<select name="frame-material" class="search-filter-select">
-									<option>8</option>
-									<option>16</option>
+									<!-- make sure that these options are mutliples of 3 and 4 -->
+									<option>12</option>
 									<option>24</option>
-									<option>32</option>
+									<option>36</option>
 								</select>
 								<div class="dropdown-arrow">
 									<img src="assets/images/arrow-down.svg" class="button-svg" />
@@ -661,8 +663,8 @@
 						</div>
 						<div class="column-2 md-column-6 mobile-display-toggle">
 							<div class="filter-item">
-								<label for="frame-material">Display results</label>
-								<select name="frame-material" class="search-filter-select">
+								<label for="mobile-display-toggle-select">Display results</label>
+								<select name="mobile-display-toggle-select" id="mobile-display-toggle-select-input">
 									<option>Display Images</option>
 									<option>Display By Name</option>
 								</select>
@@ -833,8 +835,8 @@
 
 		<section class="results-display-section">
 			<div class="results-list">
-				<div class="flex-grid">
-					<div class="column-3 lg-column-6 md-column-12">
+				<div class="flex-grid lens-results-grid">
+					<div class="lens-results-column">
 						<div class="results-item">
 							<div class="results-item-spacer"></div>
 							<div class="results-item-content">
@@ -847,7 +849,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column-3 lg-column-6 md-column-12">
+					<div class="lens-results-column">
 						<div class="results-item">
 							<div class="results-item-spacer"></div>
 							<div class="results-item-content">
@@ -860,7 +862,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column-3 lg-column-6 md-column-12">
+					<div class="lens-results-column">
 						<div class="results-item">
 							<div class="results-item-spacer"></div>
 							<div class="results-item-content">
@@ -873,7 +875,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column-3 lg-column-6 md-column-12">
+					<div class="lens-results-column">
 						<div class="results-item">
 							<div class="results-item-spacer"></div>
 							<div class="results-item-content">
@@ -886,7 +888,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column-3 lg-column-6 md-column-12">
+					<div class="lens-results-column">
 						<div class="results-item">
 							<div class="results-item-spacer"></div>
 							<div class="results-item-content">
@@ -899,7 +901,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column-3 lg-column-6 md-column-12">
+					<div class="lens-results-column">
 						<div class="results-item">
 							<div class="results-item-spacer"></div>
 							<div class="results-item-content">
@@ -912,7 +914,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column-3 lg-column-6 md-column-12">
+					<div class="lens-results-column">
 						<div class="results-item">
 							<div class="results-item-spacer"></div>
 							<div class="results-item-content">
@@ -925,7 +927,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column-3 lg-column-6 md-column-12">
+					<div class="lens-results-column">
 						<div class="results-item">
 							<div class="results-item-spacer"></div>
 							<div class="results-item-content">
@@ -938,7 +940,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column-3 lg-column-6 md-column-12">
+					<div class="lens-results-column">
 						<div class="results-item">
 							<div class="results-item-spacer"></div>
 							<div class="results-item-content">
@@ -951,7 +953,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column-3 lg-column-6 md-column-12">
+					<div class="lens-results-column">
 						<div class="results-item">
 							<div class="results-item-spacer"></div>
 							<div class="results-item-content">
@@ -964,7 +966,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column-3 lg-column-6 md-column-12">
+					<div class="lens-results-column">
 						<div class="results-item">
 							<div class="results-item-spacer"></div>
 							<div class="results-item-content">
@@ -977,59 +979,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column-3 lg-column-6 md-column-12">
-						<div class="results-item">
-							<div class="results-item-spacer"></div>
-							<div class="results-item-content">
-								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
-								<div class="product-image-container">
-									<img src="assets/images/products/product-2.png" />
-								</div>
-								<span class="product-title">Ray Ban RB3467 | 56mm</span>
-								<span class="product-price aqua">From $35.95</span>
-							</div>
-						</div>
-					</div>
-					<div class="column-3 lg-column-6 md-column-12">
-						<div class="results-item">
-							<div class="results-item-spacer"></div>
-							<div class="results-item-content">
-								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
-								<div class="product-image-container">
-									<img src="assets/images/products/product-1.png" />
-								</div>
-								<span class="product-title">Ray Ban RB3467 | 56mm</span>
-								<span class="product-price aqua">From $35.95</span>
-							</div>
-						</div>
-					</div>
-					<div class="column-3 lg-column-6 md-column-12">
-						<div class="results-item">
-							<div class="results-item-spacer"></div>
-							<div class="results-item-content">
-								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
-								<div class="product-image-container">
-									<img src="assets/images/products/product-3.png" />
-								</div>
-								<span class="product-title">Ray Ban RB3467 | 56mm</span>
-								<span class="product-price aqua">From $35.95</span>
-							</div>
-						</div>
-					</div>
-					<div class="column-3 lg-column-6 md-column-12">
-						<div class="results-item">
-							<div class="results-item-spacer"></div>
-							<div class="results-item-content">
-								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
-								<div class="product-image-container">
-									<img src="assets/images/products/product-4.png" />
-								</div>
-								<span class="product-title">Quiksilver Brigade | 56mm</span>
-								<span class="product-price aqua">From $35.95</span>
-							</div>
-						</div>
-					</div>
-					<div class="column-3 lg-column-6 md-column-12">
+					<div class="lens-results-column">
 						<div class="results-item">
 							<div class="results-item-spacer"></div>
 							<div class="results-item-content">
@@ -1048,7 +998,7 @@
 				<div class="flex-grid">
 					<div class="column-2 lg-column-12">
 						<div class="results-summary">
-							<span>Showing 1-16 of 176</span>
+							<span>Showing 1-12 of 176</span>
 						</div>
 					</div>
 					<div class="column-8 lg-column-12">
@@ -1079,6 +1029,232 @@
 				</div>
 			</div>
 		</section>
+		
+		<section class="results-display-by-name hidden">
+			<div class="flex-grid">
+				<div class="column-3 lg-column-6 md-column-12">
+					<ul class="results-list-names">
+						<li><a href="#">31 thirteen 53mm</a></li>
+						<li><a href="#">A-Wire 1.0 54mm</a></li>
+						<li><a href="#">A-Wire 2.0 54mm</a></li>
+						<li><a href="#">A-Wire 2.0 54mm</a></li>
+						<li><a href="#">A-Wire 2.0 Thick 54mm</a></li>
+						<li><a href="#">A-Wire Thick 54mm</a></li>
+						<li><a href="#">Abandon 60mm</a></li>
+						<li><a href="#">Abandon (Asian Fit) 59mm</a></li>
+						<li><a href="#">Backhand 57mm</a></li>
+						<li><a href="#">Backhand OO9178 59mm</a></li>
+						<li><a href="#">BD5949 65mm</a></li>
+						<li><a href="#">Beckon OO9125 59mm</a></li>
+						<li><a href="#">Beckon OO9125 60mm</a></li>
+						<li><a href="#">Behave OO4003 65mm</a></li>
+						<li><a href="#">Belong 64mm</a></li>
+						<li><a href="#">Betray 64mm</a></li>
+						<li><a href="#">Betray (Asian Fit) 64mm</a></li>
+						<li><a href="#">Big Square Wire 57mm</a></li>
+						<li><a href="#">Big Taco OO9173 62mm</a></li>
+						<li><a href="#">Blender OO4059 59mm</a></li>
+						<li><a href="#">Bottle Rocket OO9164 62mm</a></li>
+						<li><a href="#">Bottlecap 62mm</a></li>
+						<li><a href="#">Bottlecap 58mm</a></li>
+						<li><a href="#">Bracket 8.1 55mm</a></li>
+						<li><a href="#">Breadbox OO9199 56mm</a></li>
+						<li><a href="#">Break Point OO9168 62mm</a></li>
+						<li><a href="#">C-Wire 54mm</a></li>
+						<li><a href="#">C-Wire 61mm</a></li>
+						<li><a href="#">Canteen 57mm</a></li>
+						<li><a href="#">Canteen OO9225 60mm</a></li>
+						<li><a href="#">Carbon Blade OO9174 66mm</a></li>
+						<li><a href="#">Carbon Shift OO9302 62mm</a></li>
+						<li><a href="#">Catalyst OO9272 56mm</a></li>
+						<li><a href="#">Caveat OO4054 60mm</a></li>
+						<li><a href="#">Chainlink OO9247 57mm</a></li>
+						<li><a href="#">Chainlink OO9252 57mm</a></li>
+						<li><a href="#">Cohort OO9301 62mm</a></li>
+						<li><a href="#">Coilover OX5043 51mm</a></li>
+						<li><a href="#">Coin OX5071 54mm</a></li>
+						<li><a href="#">Commit AV9108 62mm</a></li>
+						<li><a href="#">Commit SQ 62mm</a></li>
+						<li><a href="#">Conductor 6 OO4106 58mm</a></li>
+						<li><a href="#">Conductor 8 OO4107 60mm</a></li>
+					</ul>
+				</div>
+				<div class="column-3 lg-column-6 md-column-12">
+					<ul class="results-list-names">
+						<li><a href="#">Confront OO2024 58mm</a></li>
+						<li><a href="#">Convey OX1059 51mm</a></li>
+						<li><a href="#">Corkscrew 4.0 53mm</a></li>
+						<li><a href="#">Correspondent OO9094 61mm</a></li>
+						<li><a href="#">Cover Story OO4042 62mm</a></li>
+						<li><a href="#">Crankcase OO9165 56mm</a></li>
+						<li><a href="#">Crankshaft OO9239 60mm</a></li>
+						<li><a href="#">Crosshair 60mm</a></li>
+						<li><a href="#">Crosshair 1.0 60mm</a></li>
+						<li><a href="#">Crosshair 2.0 63mm</a></li>
+						<li><a href="#">Crosshair 3 OO6014 61mm</a></li>
+						<li><a href="#">Crosshair OO4060 61mm</a></li>
+						<li><a href="#">Crosshair S 59mm</a></li>
+						<li><a href="#">Crosslink OX8048 56mm</a></li>
+						<li><a href="#">Crossrange OO9361 57mm</a></li>
+						<li><a href="#">Crossrange Patch OO9382 60mm</a></li>
+						<li><a href="#">Crossrange R OO9359 57mm</a></li>
+						<li><a href="#">Crossrange XL OO9360 57mm</a></li>
+						<li><a href="#">Daisy Chain OO4062 60mm</a></li>
+						<li><a href="#">Dangerous 60mm</a></li>
+						<li><a href="#">Dangerous 57mm</a></li>
+						<li><a href="#">Det Cord OO025 61mm</a></li>
+						<li><a href="#">Deviation OO4061 59mm</a></li>
+						<li><a href="#">Diecutter OO4137 55mm</a></li>
+						<li><a href="#">Disclosure 58mm</a></li>
+						<li><a href="#">Disclosure OO4110 58mm</a></li>
+						<li><a href="#">Discreet OO2012 58mm</a></li>
+						<li><a href="#">Disguise OO2030 58mm</a></li>
+						<li><a href="#">Disobey 60mm</a></li>
+						<li><a href="#">Dispatch II OO9150 61mm</a></li>
+						<li><a href="#">Dispatch OO9090 62mm</a></li>
+						<li><a href="#">Dispute OO9233 61mm</a></li>
+						<li><a href="#">Double Edge OO9380 66mm</a></li>
+						<li><a href="#">Drizzle OO9159 61mm</a></li>
+						<li><a href="#">Drop In OO9232 58mm</a></li>
+						<li><a href="#">Drop Point OO9367 61mm</a></li>
+						<li><a href="#">E Wire 56mm</a></li>
+						<li><a href="#">E Wire 2.1 51mm</a></li>
+						<li><a href="#">E Wire Generation 2 56mm</a></li>
+						<li><a href="#">Elmont L OO4119 60mm</a></li>
+						<li><a href="#">Elmont M OO4119 58mm</a></li>
+						<li><a href="#">Embrace 60mm</a></li>
+						<li><a href="#">Embrace (Asian Fit) 57mm</a></li>
+					</ul>
+				</div>
+				<div class="column-3 lg-column-6 md-column-12">
+					<ul class="results-list-names">
+						<li><a href="#">Encounter OO9091 58mm</a></li>
+						<li><a href="#">Enduro OO9223 55mm</a></li>
+						<li><a href="#">Eternal 62mm</a></li>
+						<li><a href="#">Eye Jacket 62mm</a></li>
+						<li><a href="#">Eye Jacket 58mm</a></li>
+						<li><a href="#">Eye Jacket 58mm</a></li>
+						<li><a href="#">Eye Jacket 2.0 54mm</a></li>
+						<li><a href="#">Eye Patch 64mm</a></li>
+						<li><a href="#">EyePatch 2 OO9136 64mm</a></li>
+						<li><a href="#">Fast Jacket OO9097 71mm</a></li>
+						<li><a href="#">Fast Jacket OO9156 71mm</a></li>
+						<li><a href="#">Fat Cat OX1041 54mm</a></li>
+						<li><a href="#">Fate 51mm</a>
+						<li><a href="#">Feedback OO4079 59mm</a>
+						<li><a href="#">Felon 58mm</a>
+						<li><a href="#">Fenceline OX8069 53mm</a>
+						<li><a href="#">Five Squared OO9238 54mm</a>
+						<li><a href="#">Fives 2.0 53mm</a>
+						<li><a href="#">Fives 3.0 54mm</a>
+						<li><a href="#">Fives 4.0 54mm</a>
+						<li><a href="#">Fives Late 1990s 53mm</a>
+						<li><a href="#">Fives Squared 54mm</a>
+						<li><a href="#">Fives XS 49mm</a></li>
+						<li><a href="#">Flak 63mm</a></li>
+						<li><a href="#">Flak 2.0 OO9295 59mm</a></li>
+						<li><a href="#">Flak 2.0 XL OO9188 59mm</a></li>
+						<li><a href="#">Flak Jacket 63mm</a></li>
+						<li><a href="#">Flak Jacket 56mm</a></li>
+						<li><a href="#">Flak Jacket XLJ 63mm</a></li>
+						<li><a href="#">Flak XLJ 63mm</a></li>
+						<li><a href="#">Flaunt OO9083 57mm</a></li>
+						<li><a href="#">Flawless 2.0 50mm</a></li>
+						<li><a href="#">Forehand OO9179 57mm</a></li>
+						<li><a href="#">Four S 47mm</a></li>
+						<li><a href="#">Fringe 60mm</a></li>
+						<li><a href="#">Fringe OO9124 59mm</a></li>
+						<li><a href="#">Frogskin Collectors 55mm</a></li>
+						<li><a href="#">Frogskin OO9013 55mm</a></li>
+						<li><a href="#">Frogskins (New) 60mm</a></li>
+						<li><a href="#">Frogskins Early 54mm</a></li>
+						<li><a href="#">Frogskins Gen 3 55mm</a></li>
+						<li><a href="#">Frogskins Lite OO9374 63mm</a></li>
+						<li><a href="#">Frogskins LX OO2043 55mm</a></li>
+					</ul>
+				</div>
+				<div class="column-3 lg-column-6 md-column-12">
+					<ul class="results-list-names">
+						<li><a href="#">Fuel Cell 65mm</a></li>
+						<li><a href="#">Fuel Cell 009096 60mm</a></li>
+						<li><a href="#">Game Changer OO9291 58mm</a></li>
+						<li><a href="#">Garage Rock OO9175 55mm</a></li>
+						<li><a href="#">Gascan 60mm</a></li>
+						<li><a href="#">Gascan 55mm</a></li>
+						<li><a href="#">Gascan 57mm</a></li>
+						<li><a href="#">Gascan S 57mm</a></li>
+						<li><a href="#">Gasket OX1012 52mm</a></li>
+						<li><a href="#">Gauge 6 OO6038 57mm</a></li>
+						<li><a href="#">Gauge 8 OO4124 57mm</a></li>
+						<li><a href="#">Gauge 8 OO4124 62mm</a></li>
+						<li><a href="#">Grapevine 64mm</a></li>
+						<li><a href="#">Half Jacket 60mm</a></li>
+						<li><a href="#">Half Jacket 2.0 OO9144 62mm</a></li>
+						<li><a href="#">Half Jacket 2.0 OO9154 62mm</a></li>
+						<li><a href="#">Half Jacket XLJ 60mm</a></li>
+						<li><a href="#">Half Wife 1.0 54mm</a></li>
+						<li><a href="#">Half Wire 54mm</a></li>
+						<li><a href="#">Half Wire 2.0 57mm</a></li>
+						<li><a href="#">Half Wire Original 53mm</a></li>
+						<li><a href="#">Halflink OO9251 61mm</a></li>
+						<li><a href="#">Hall Pass OO9203 56mm</a></li>
+						<li><a href="#">Halo 49mm</a></li>
+						<li><a href="#">Hatchet 55mm</a></li>
+						<li><a href="#">Hijinx Ducati OO9021 64mm</a></li>
+						<li><a href="#">Hijinx OO9021 64mm</a></li>
+						<li><a href="#">Hinder OO4043 62mm</a></li>
+						<li><a href="#">Holbrook LX OO2038 57mm</a></li>
+						<li><a href="#">Holbrook LX OO2048 56mm</a></li>
+						<li><a href="#">Holbrook Metal OO4123 55mm</a></li>
+						<li><a href="#">Holbrook Mix OO9384 57mm</a></li>
+						<li><a href="#">Holbrook OO9102 57mm</a></li>
+						<li><a href="#">Holbrook OO9102 55mm</a></li>
+						<li><a href="#">Holbrook OO9244 56mm</a></li>
+						<li><a href="#">Holbrook R OO9377 55mm</a></li>
+						<li><a href="#">Holbrook XL OO9417 59mm</a></li>
+						<li><a href="#">Hold On OO9298 58mm</a></li>
+						<li><a href="#">Hold Out OO9357 55mm</a></li>
+						<li><a href="#">Holston OO9334 58mm</a></li>
+						<li><a href="#">Ice Pick 67mm</a></li>
+						<li><a href="#">Ice Pick 63mm</a></li>
+						<li><a href="#">Inmate 65mm</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="results-list-navigation display-by-name-navigation">
+				<div class="flex-grid">
+					<div class="column-2 lg-column-12">
+						<div class="results-summary">
+							<span>Showing 1-96 of 176</span>
+						</div>
+					</div>
+					<div class="column-8 lg-column-12">
+						<div class="results-list-navigation-element">
+							<div class="previous-page-link">
+								<div class="link-wrapper">
+									<img src="assets/images/previous-arrow.svg" class="button-svg" />
+									<span>Previous Page</span>
+								</div>
+							</div>
+							<div class="page-numbers">
+								<ul>
+									<li class="current-page">1</li>
+									<li>2</li>
+								</ul>
+							</div>
+							<div class="next-page-link">
+								<div class="link-wrapper">
+									<span>Next Page</span>
+									<img src="assets/images/next-arrow.svg" class="button-svg" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column-2 lg-column-hide"></div>
+				</div>
+			</div>
+		</section>
+
 	</div>
 	<footer class="site-footer">
 		<section class="social-media-footer-section">

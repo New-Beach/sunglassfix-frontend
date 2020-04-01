@@ -130,23 +130,30 @@ $('.close-search-dialogue').click(function(){
     $('.search-dialogue').removeClass('active');
 });
 
-/* Stick the filter element to the header on scroll */
+/* Stick the filter element to the header on scroll, and adjust the elements
+under this filter element to the new page layout */
 
 var bottom_height = $('.navigation-search-bar').height();
 var top_height = $('.top-header-bar').height();
 var header_offset = top_height + bottom_height;
 var distance = $('.search-filter').offset().top - header_offset;
+var search_filter_height = $('.search-filter').height();
+var total_header_height = header_offset + search_filter_height;
 
 $(window).scroll(function() {
     if ( $(this).scrollTop() >= distance ) {
         $('.search-filter').addClass('scrolled');
         $('.search-filter-dialogue').addClass('scrolled');
-        $('.results-display-section').addClass('scrolled');
+        $('.search-filter-dialogue').css('margin-top', total_header_height);
+        $('.results-display-section').css('margin-top', search_filter_height);
+        $('.results-display-by-name').css('margin-top', search_filter_height);
     }
     if ( $(this).scrollTop() < distance ) {
         $('.search-filter').removeClass('scrolled');
         $('.search-filter-dialogue').removeClass('scrolled');
-        $('.results-display-section').removeClass('scrolled');
+        $('.search-filter-dialogue').css('margin-top', '0');
+        $('.results-display-section').css('margin-top', '0');
+        $('.results-display-by-name').css('margin-top', '0');
     }
 });
 
@@ -197,6 +204,19 @@ $('.toggle-button').click(function(){
     } else {
         $('.toggle-button').removeClass('active');
         $(this).addClass('active');
+        $('.results-display-by-name').toggleClass('hidden');
+        $('.results-display-section').toggleClass('hidden');
+    }
+});
+
+$("#mobile-display-toggle-select-input").change(function(){
+    var mobileDisplay = $("#mobile-display-toggle-select-input").val();
+    if (mobileDisplay == 'Display Images'){
+        $('.results-display-by-name').addClass('hidden');
+        $('.results-display-section').removeClass('hidden');
+    } else {
+        $('.results-display-by-name').removeClass('hidden');
+        $('.results-display-section').addClass('hidden'); 
     }
 });
 
