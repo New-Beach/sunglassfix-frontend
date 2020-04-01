@@ -21,6 +21,9 @@
 
 <body>
 	<div class="main-content-wrapper">
+		<!-- 
+		This is the site header that appears on every page. It is fixed to the top of the page on scroll and has a numver of functions tied to it which are explained in the master.js file. There is also a mobile header further down which repeats a few key modules, please keep this in mind when linking up functionality.
+		 -->
 		<header class="site-header">
 			<div class="top-header-bar">
 				<div class="flex-grid">
@@ -35,6 +38,7 @@
 					</div>
 					<div class="column-4 lg-column-6">
 						<div class="user-cart-settings-nav">
+							<!-- The language select element to select international site -->
 							<div class="language-select">
 								<div class="current-language">
 									<div class="flag-container">
@@ -79,6 +83,7 @@
 									</div>
 								</div>
 							</div>
+							<!-- The currency select element to change currencies -->
 							<div class="currency-select">
 								<div class="current-currency">
 									<span class="currency">$AUD <img class="button-svg select-arrow" src="assets/images/arrow-down.svg" /></span>
@@ -92,11 +97,13 @@
 									</ul>
 								</div>
 							</div>
+							<!-- This area is inteded for any other links of importance that don't fit in the main menu -->
 							<div class="page-links">
 								<ul>
 									<li><a href="#">Help & FAQs</a></li>
 								</ul>
 							</div>
+							<!-- These links and icons are tied to the ecommerce funtions i.e cart and account -->
 							<div class="user-commerce-links">
 								<div class="account-link">
 									<a href="">
@@ -203,24 +210,27 @@
 				<div class="flex-grid">
 					<div class="column-5">
 						<div class="search-bar-container">
+							<!-- Clickign this element launches the search dialogue -->
 							<div class="search-button rounded-button activate-search-dialogue">
-							<!-- See master.js for nots on search dialogue buttons -->
+							<!-- See master.js for notes on search dialogue buttons -->
 								<img src="assets/images/search-icon.svg" class="button-svg"/>
 								<span>Find your sunglass lenses</span>
 							</div>
-							<!-- Insert Activated Search Element Here -->
 						</div>
 					</div>
+					<!-- The main logo for the site, there is some functionality tied to the colours in this SVG explained in master.js -->
 					<div class="column-2">
 						<div class="header-logo-container">
 							<img src="assets/images/sunglass-fix-logo.svg" class="button-svg header-logo" />
 						</div>
 					</div>
 					<div class="column-5">
+						<!-- the mobile menu button which is hidden on desktop -->
 						<div class="mobile-menu-bars">
 							<img src="assets/images/mobile-menu.svg" class="mobile-menu-open button-svg" />
 							<img src="assets/images/mobile-menu-close.svg" class="mobile-menu-close button-svg" />
 						</div>
+						<!-- This is the main navigation with top level links and sub menus -->
 						<div class="page-navigation-container">
 							<nav class="page-navigation">
 								<ul>
@@ -262,8 +272,10 @@
 					</div>
 				</div>
 			</div>
+			<!-- This is the mobile only menu which replaces a number of modules in the desktop version -->
 			<div class="mobile-menu-element">
 				<div class="mobile-menu-top-bar">
+					<!-- Mobile language select -->
 					<div class="mobile-language-select">
 						<div class="current-language">
 							<div class="flag-container">
@@ -308,6 +320,7 @@
 							</div>
 						</div>
 					</div>
+					<!-- Mobile currency select -->
 					<div class="mobile-currency-select">
 						<div class="current-currency">
 							<span class="currency">$AUD <img class="button-svg select-arrow" src="assets/images/arrow-down.svg" /></span>
@@ -322,6 +335,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- Mobile main page navigation select -->
 				<nav class="mobile-page-navigation">
 					<ul>
 						<li class="mobile-nav-item">
@@ -387,9 +401,15 @@
 								</li>
 							</ul>
 						</li>
-
+					</ul>
+					<!-- These are some additional links from the desktop top bar -->
+					<ul class="additional-links">
+						<li><a href="">Your Cart</a></li>
+						<li><a href="">Your Account</a></li>
+						<li><a href="">Help & FAQs</a></li>
 					</ul>
 				</nav>
+				<!-- An additional search bar for mobile so users can still be prompted to search from the menu -->
 				<div class="fixed-mobile-search">
 					<div class="search-button activate-search-dialogue">
 						<img src="assets/images/search-icon.svg" class="button-svg"/>
@@ -397,7 +417,8 @@
 					</div>
 				</div>
 			</div>
-
+			
+			<!-- This is the search dialogue including diagrams and other links, it should change dynamically based on the user input. At the moment there is an example of the results showing when you type in some input and hit enter. -->
 			<div class="search-dialogue">
 				<div class="search-dialogue-box">
 					<div class="search-bar-section">
@@ -408,17 +429,20 @@
 										<button class="search-button" type="submit">
 											<img src="assets/images/search-icon.svg" class="button-svg" />
 										</button>
+										<!-- Type in here to change results display -->
 										<input type="text" class="main-header-search-input" placeholder="Enter your model number or lens brand" />
 									</form>
 								</div>
 							</div>
 							<div class="column-2">
+								<!-- Closes the dialogue -->
 								<div class="close-search-dialogue">
 									<img src="assets/images/close-red.svg" class="button-svg" />
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- This is the area where dynamic results are switched out - the three main ones are the default with the diagrams, a version with results showing, and a version showing that no results were found (not included here) -->
 					<div class="dynamic-results-area">
 						<div class="default-appearance">
 							<div class="flex-grid">
@@ -521,7 +545,7 @@
 
 		</header>
 		
-		<!-- Brand Page Banner Module -->
+		<!-- This area should only appear on the brand pages -->
 		<section class="brand-page-banner background-color"><!-- See master.js for background-color explainer -->
 			<div class="flex-grid">
 				<div class="column-6 lg-column-7 md-column-12 md-order-1">
@@ -544,7 +568,7 @@
 			</div>
 		</section>
 
-		<!-- Search Filter Module -->
+		<!-- This search filter menu bar becomes fixed as you scroll through results, it launches the search filter dialogue, and also contains the images/names toggle -->
 		<section class="search-filter">
 			<div class="flex-grid">
 				<div class="column-4 lg-column-12">
@@ -583,7 +607,8 @@
 				</div>
 			</div>
 		</section>
-
+		
+		<!-- This is the filter module which controls which results are diplayed, how many are displayed, and orders the results -->
 		<section class="search-filter-dialogue">
 			<div class="filter-box">
 				<div class="main-filters">
@@ -661,6 +686,7 @@
 								</div>
 							</div>
 						</div>
+						<!-- This additional option is included for mobile to save space. The fucntionality is the same as the other toggle button -->
 						<div class="column-2 md-column-6 mobile-display-toggle">
 							<div class="filter-item">
 								<label for="mobile-display-toggle-select">Display results</label>
@@ -832,6 +858,8 @@
 				</div>
 			</div>
 		</section>		
+		
+		<!-- This is the default results view which shows images -->
 
 		<section class="results-display-section">
 			<div class="results-list">
@@ -994,6 +1022,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- This is the page navigation for this section -->
 			<div class="results-list-navigation">
 				<div class="flex-grid">
 					<div class="column-2 lg-column-12">
@@ -1029,6 +1058,8 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- This is the name results view which is hidden by default. It is visible when the toggle is activated -->
 		
 		<section class="results-display-by-name hidden">
 			<div class="flex-grid">
@@ -1221,6 +1252,7 @@
 					</ul>
 				</div>
 			</div>
+			<!-- This area also has its own navigation as by default it should show a lot more results than the images section -->
 			<div class="results-list-navigation display-by-name-navigation">
 				<div class="flex-grid">
 					<div class="column-2 lg-column-12">
@@ -1256,6 +1288,8 @@
 		</section>
 
 	</div>
+
+	<!-- This is the site footer which is common accross all pages -->
 	<footer class="site-footer">
 		<section class="social-media-footer-section">
 			<div class="flex-grid">
@@ -1484,13 +1518,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
 	<script src="js/min/all.js"></script>
-
-	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-	<script>
-		window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-		ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-	</script>
-	<script src="https://www.google-analytics.com/analytics.js" async></script>
+	
 </body>
 
 </html>

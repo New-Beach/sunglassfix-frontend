@@ -1388,6 +1388,18 @@
 		display: block;
 	}
 
+	.additional-links {
+		padding: 1rem;
+
+		li {
+			padding-bottom: 1rem;
+
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+
 	.fixed-mobile-search {
 		position: absolute;
 		bottom: 0;

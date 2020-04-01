@@ -32,7 +32,7 @@ $('img.button-svg').each(function(){
     }, 'xml');
 });
 
-/* Mobile Menu functions */
+/* Mobile Menu functions. This opens the mobile menu and replaces the icon to reflect the new state */
 
 $('.mobile-menu-bars').click(function(){
     $(this).toggleClass('open');
@@ -157,7 +157,7 @@ $(window).scroll(function() {
     }
 });
 
-/* Activate, display and hide the filter dialogue */
+/* Activate, display and hide the search filter dialogue */
 
 $('#refine-search-results-toggle').click(function(){
     $(this).toggleClass('active');
@@ -208,6 +208,8 @@ $('.toggle-button').click(function(){
         $('.results-display-section').toggleClass('hidden');
     }
 });
+
+// Toggle Results View Functionality for mobile
 
 $("#mobile-display-toggle-select-input").change(function(){
     var mobileDisplay = $("#mobile-display-toggle-select-input").val();
