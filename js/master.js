@@ -126,12 +126,11 @@ $('.close-search-dialogue').click(function(){
 /* Stick the filter element to the header on scroll, and adjust the elements
 under this filter element to the new page layout */
 
-var bottom_height = $('.navigation-search-bar').height();
-var top_height = $('.top-header-bar').height();
-var header_offset = top_height + bottom_height;
-var distance = $('.search-filter').offset().top - header_offset;
+var header_height = $('.site-header').outerHeight();
+console.log(header_height);
+var distance = $('.search-filter').offset().top - header_height;
 var search_filter_height = $('.search-filter').height();
-var total_header_height = header_offset + search_filter_height;
+var total_header_height = header_height + search_filter_height;
 
 $(window).scroll(function() {
     if ( $(this).scrollTop() >= distance ) {
@@ -148,7 +147,10 @@ $(window).scroll(function() {
         $('.results-display-section').css('margin-top', '0');
         $('.results-display-by-name').css('margin-top', '0');
     }
-});
+}); 
+
+
+
 
 /* Activate, display and hide the search filter dialogue */
 

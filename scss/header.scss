@@ -453,6 +453,7 @@
 	.header-logo-container {
 		text-align: center;
 		position: relative;
+		height: 0; /* necessary to not interfere with header height calculation */
 
 		svg {
 			position: absolute;
