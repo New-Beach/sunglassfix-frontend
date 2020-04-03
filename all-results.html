@@ -1,0 +1,1502 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="icon.png">
+	
+	<!-- Individual stylesheets for each module / should be combined and minified for production -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/master.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/module-search-filter.css">
+	<link rel="stylesheet" href="css/brand-results-page.css">
+
+	<meta name="theme-color" content="#14145A">
+</head>
+
+<body>
+	<div class="main-content-wrapper">
+		<!-- 
+		This is the site header that appears on every page. It is fixed to the top of the page on scroll and has a numver of functions tied to it which are explained in the master.js file. There is also a mobile header further down which repeats a few key modules, please keep this in mind when linking up functionality.
+		 -->
+		<header class="site-header">
+			<div class="top-header-bar">
+				<div class="flex-grid">
+					<div class="column-4 lg-column-hide"></div>
+					<div class="column-4 lg-column-6">
+						<div class="free-shipping">
+							<div class="small-text">
+								<span class="aqua">Free Shipping on all orders</span>
+								<img class="inline-icon button-svg" src="assets/images/plane-icon.svg" />
+							</div>
+						</div>
+					</div>
+					<div class="column-4 lg-column-6">
+						<div class="user-cart-settings-nav">
+							<!-- The language select element to select international site -->
+							<div class="language-select">
+								<div class="current-language">
+									<div class="flag-container">
+										<img src="assets/images/uk-flag.png" class="flag-image" />
+									</div>
+									<img class="select-arrow button-svg" src="assets/images/arrow-down.svg" />
+									<div class="language-dropdown">
+										<ul>
+											<li>
+												<a href="">
+													<div class="flag-container">
+														<img src="assets/images/australia-flag.png" class="flag-image" />
+													</div>
+													<span>English (AU)</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div class="flag-container">
+														<img src="assets/images/uk-flag.png" class="flag-image" />
+													</div>
+													<span>English (UK)</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div class="flag-container">
+														<img src="assets/images/usa-flag.png" class="flag-image" />
+													</div>
+													<span>English (US)</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<div class="flag-container">
+														<img src="assets/images/es-flag.png" class="flag-image" />
+													</div>
+													<span>Spanish</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- The currency select element to change currencies -->
+							<div class="currency-select">
+								<div class="current-currency">
+									<span class="currency">$AUD <img class="button-svg select-arrow" src="assets/images/arrow-down.svg" /></span>
+								</div>
+								<div class="currency-dropdown">
+									<ul>
+										<li><a href="">$AUS</a></li>
+										<li><a href="">$USD</a></li>
+										<li><a href="">£GBP</a></li>
+										<li><a href="">€EUR</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- This area is inteded for any other links of importance that don't fit in the main menu -->
+							<div class="page-links">
+								<ul>
+									<li><a href="#">Help & FAQs</a></li>
+								</ul>
+							</div>
+							<!-- These links and icons are tied to the ecommerce funtions i.e cart and account -->
+							<div class="user-commerce-links">
+								<div class="account-link">
+									<a href="">
+										<img src="assets/images/account-icon.svg" class="link-icon button-svg" />
+									</a>
+								</div>
+								<!-- Once this element is hovered over the cart-preview-hover element appears -->
+								<div class="cart-link-wrapper">
+									<div class="cart-link">
+										<a href="">
+											<img src="assets/images/cart-icon.svg" class="link-icon button-svg" />
+										</a>
+										<div class="cart-count-container">
+											<div class="cart-count">
+												<span>2</span>
+											</div>
+										</div>
+									</div>
+									<!-- This element is absolutely positioned and hidden until the user hovers over the cart-link -->
+									<section class="cart-preview-hover">
+										<div class="cart-preview">
+											<header class="cart-header">
+												<h5>Your Cart</h5>
+											</header>
+											<!-- For each item in the shopping cart, one of these cart-summary-item elements is generated -->
+											<div class="cart-summary-item">
+												<div class="product-row-top">
+													<div class="cart-product-image">
+														<img src="assets/images/quicksilver-sunnies.png" class="product-image" />
+													</div>
+													<div class="cart-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm</h5>
+														<p class="small-text">- SFx Ultra Polarized<br />
+														- Ultimate Brown Hardcoat</p>
+													</div>
+													<div class="remove-product">
+														<img src="assets/images/close-red.svg" class="button-svg"/>
+													</div>
+												</div>
+												<div class="product-row-bottom">
+													<div class="product-amount">
+														<div class="reduce-amount">
+															<img src="assets/images/reduce-amount.svg" class="button-svg"/>
+														</div>
+														<div class="amount-display">
+															<span>1</span>
+														</div>
+														<div class="increase-amount">
+															<img src="assets/images/increase-amount.svg" class="button-svg"/>
+														</div>
+													</div>
+													<div class="product-price">
+														<span class="aqua">
+															<strong>$45.93</strong>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="cart-summary-item">
+												<div class="product-row-top">
+													<div class="cart-product-image">
+														<img src="assets/images/coach-sunnies.png" class="product-image" />
+													</div>
+													<div class="cart-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Coach HC7077 | 58mm</h5>
+														<p class="small-text">- SFx Ultra Polarized<br />
+														- Ultimate Brown Hardcoat</p>
+													</div>
+													<div class="remove-product">
+														<img src="assets/images/close-red.svg" class="button-svg"/>
+													</div>
+												</div>
+												<div class="product-row-bottom">
+													<div class="product-amount">
+														<div class="reduce-amount">
+															<img src="assets/images/reduce-amount.svg" class="button-svg"/>
+														</div>
+														<div class="amount-display">
+															<span>1</span>
+														</div>
+														<div class="increase-amount">
+															<img src="assets/images/increase-amount.svg" class="button-svg"/>
+														</div>
+													</div>
+													<div class="product-price">
+														<span class="aqua">
+															<strong>$45.93</strong>
+														</span>
+													</div>
+												</div>
+											</div>
+											<footer class="cart-footer">
+												<div class="rounded-button white-button"><a class="navy" href="#">View Cart</a></div>
+												<div class="rounded-button orange-button"><a href="#">Proceed to Checkout</a></div>
+											</footer>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="navigation-search-bar">
+				<div class="flex-grid">
+					<div class="column-5">
+						<div class="search-bar-container">
+							<!-- Clickign this element launches the search dialogue -->
+							<div class="search-button rounded-button activate-search-dialogue">
+							<!-- See master.js for notes on search dialogue buttons -->
+								<img src="assets/images/search-icon.svg" class="button-svg"/>
+								<span>Find your sunglass lenses</span>
+							</div>
+						</div>
+					</div>
+					<!-- The main logo for the site, there is some functionality tied to the colours in this SVG explained in master.js -->
+					<div class="column-2">
+						<div class="header-logo-container">
+							<img src="assets/images/sunglass-fix-logo.svg" class="button-svg header-logo" />
+						</div>
+					</div>
+					<div class="column-5">
+						<!-- the mobile menu button which is hidden on desktop -->
+						<div class="mobile-menu-bars">
+							<img src="assets/images/mobile-menu.svg" class="mobile-menu-open button-svg" />
+							<img src="assets/images/mobile-menu-close.svg" class="mobile-menu-close button-svg" />
+						</div>
+						<!-- This is the main navigation with top level links and sub menus -->
+						<div class="page-navigation-container">
+							<nav class="page-navigation">
+								<ul>
+									<li>
+										<a href="">Shop Lenses</a>
+										<img src="assets/images/arrow-down.svg" class="button-svg" />
+										<img src="assets/images/drodown-mobile.svg" class="mobile-menu-toggle" />
+										<ul class="sub-menu">
+											<li><a href="">Shop by Brand</a></li>
+											<li><a href="">Shop by Model</a></li>
+											<li><a href="">Custom made sunglass lenses</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">How To</a>
+										<img src="assets/images/arrow-down.svg" class="button-svg" />
+										<img src="assets/images/drodown-mobile.svg" class="mobile-menu-toggle" />
+										<ul class="sub-menu">
+											<li><a href="">Install your lenses</a></li>
+											<li><a href="">Repair your sunglasses</a></li>
+											<li><a href="">Take care of your lenses</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">About</a>
+										<img src="assets/images/arrow-down.svg" class="button-svg" />
+										<img src="assets/images/drodown-mobile.svg" class="mobile-menu-toggle" />
+										<ul class="sub-menu">
+											<li><a href="">Our Story</a></li>
+											<li><a href="">Sustainability Guarantee</a></li>
+											<li><a href="">Awards</a></li>
+											<li><a href="">Blog</a></li>
+											<li><a href="">Contact</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- This is the mobile only menu which replaces a number of modules in the desktop version -->
+			<div class="mobile-menu-element">
+				<div class="mobile-menu-top-bar">
+					<!-- Mobile language select -->
+					<div class="mobile-language-select">
+						<div class="current-language">
+							<div class="flag-container">
+								<img src="assets/images/uk-flag.png" class="flag-image" />
+							</div>
+							<img class="select-arrow button-svg" src="assets/images/arrow-down.svg" />
+							<div class="language-dropdown">
+								<ul>
+									<li>
+										<a href="">
+											<div class="flag-container">
+												<img src="assets/images/australia-flag.png" class="flag-image" />
+											</div>
+											<span>English (AU)</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="flag-container">
+												<img src="assets/images/uk-flag.png" class="flag-image" />
+											</div>
+											<span>English (UK)</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="flag-container">
+												<img src="assets/images/usa-flag.png" class="flag-image" />
+											</div>
+											<span>English (US)</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="flag-container">
+												<img src="assets/images/es-flag.png" class="flag-image" />
+											</div>
+											<span>Spanish</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- Mobile currency select -->
+					<div class="mobile-currency-select">
+						<div class="current-currency">
+							<span class="currency">$AUD <img class="button-svg select-arrow" src="assets/images/arrow-down.svg" /></span>
+						</div>
+						<div class="currency-dropdown">
+							<ul>
+								<li><a href="">$AUS</a></li>
+								<li><a href="">$USD</a></li>
+								<li><a href="">£GBP</a></li>
+								<li><a href="">€EUR</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Mobile main page navigation select -->
+				<nav class="mobile-page-navigation">
+					<ul>
+						<li class="mobile-nav-item">
+							<div class="mobile-link-wrapper">
+								<a href="">Shop Lenses</a>
+								<div class="button-wrapper">
+									<img class="button-svg" src="assets/images/arrow-down.svg" />
+								</div>
+							</div>
+							<ul class="mobile-sub-menu">
+								<li>
+									<a href="">Shop By Brand</a>
+								</li>
+								<li>
+									<a href="">Shop By Model</a>
+								</li>
+								<li>
+									<a href="">Custom made sunglass lenses</a>
+								</li>
+							</ul>
+						</li>
+						<li class="mobile-nav-item">
+							<div class="mobile-link-wrapper">
+								<a href="">How to</a>
+								<div class="button-wrapper">
+									<img class="button-svg" src="assets/images/arrow-down.svg" />
+								</div>
+							</div>
+							<ul class="mobile-sub-menu">
+								<li>
+									<a href="">Install your lenses</a>
+								</li>
+								<li>
+									<a href="">Repair your sunglasses</a>
+								</li>
+								<li>
+									<a href="">Take care of your lenses</a>
+								</li>
+							</ul>
+						</li>
+						<li class="mobile-nav-item">
+							<div class="mobile-link-wrapper">
+								<a href="">About</a>
+								<div class="button-wrapper">
+									<img class="button-svg" src="assets/images/arrow-down.svg" />
+								</div>
+							</div>
+							<ul class="mobile-sub-menu">
+								<li>
+									<a href="">Our Story</a>
+								</li>
+								<li>
+									<a href="">Sustainability Guaratee</a>
+								</li>
+								<li>
+									<a href="">Awards</a>
+								</li>
+								<li>
+									<a href="">Blog</a>
+								</li>
+								<li>
+									<a href="">Contact</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<!-- These are some additional links from the desktop top bar -->
+					<ul class="additional-links">
+						<li><a href="">Your Cart</a></li>
+						<li><a href="">Your Account</a></li>
+						<li><a href="">Help & FAQs</a></li>
+					</ul>
+				</nav>
+				<!-- An additional search bar for mobile so users can still be prompted to search from the menu -->
+				<div class="fixed-mobile-search">
+					<div class="search-button activate-search-dialogue">
+						<img src="assets/images/search-icon.svg" class="button-svg"/>
+						<span>Find your sunglass lenses</span>
+					</div>
+				</div>
+			</div>
+			
+			<!-- This is the search dialogue including diagrams and other links, it should change dynamically based on the user input. At the moment there is an example of the results showing when you type in some input and hit enter. -->
+			<div class="search-dialogue">
+				<div class="search-dialogue-box">
+					<div class="search-bar-section">
+						<div class="flex-grid">
+							<div class="column-10">
+								<div class="search-bar">
+									<form class="main-header-search">
+										<button class="search-button" type="submit">
+											<img src="assets/images/search-icon.svg" class="button-svg" />
+										</button>
+										<!-- Type in here to change results display -->
+										<input type="text" class="main-header-search-input" placeholder="Enter your model number or lens brand" />
+									</form>
+								</div>
+							</div>
+							<div class="column-2">
+								<!-- Closes the dialogue -->
+								<div class="close-search-dialogue">
+									<img src="assets/images/close-red.svg" class="button-svg" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- This is the area where dynamic results are switched out - the three main ones are the default with the diagrams, a version with results showing, and a version showing that no results were found (not included here) -->
+					<div class="dynamic-results-area">
+						<div class="default-appearance">
+							<div class="flex-grid">
+								<div class="column-8 lg-column-12">
+									<div class="identify-model-diagram">
+										<h5>Quickly identify your model number:</h5>
+										<div class="diagram-container">
+											<img class="desktop-diagram" src="assets/images/desktop-diagram.svg" alt="How to identify your model number diagram"/>
+											<img class="mobile-diagram" src="assets/images/mobile-diagram.svg" alt="How to identify your model number diagram"/>
+										</div>
+									</div>
+								</div>
+								<div class="column-4 lg-column-12">
+									<div class="helper-links">
+										<h5>Can't see your model number?</h5>
+										<div class="rounded-button">
+											<a href="">How to identify your lenses</a>
+										</div>
+										<div class="rounded-button">
+											<a href="">Watch the helper video</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="display-results">
+							<div class="flex-grid">
+								<div class="column-12">
+									<div class="brand-keyword-found-section">
+										<span>Search by brand <a href="">Ray Ban</a></span>
+									</div>
+									<div class="results-list">
+										<ul>
+											<li>
+												<div class="result-row">
+													<div class="result-product-image">
+														<img src="assets/images/quicksilver-sunnies.png" class="result-image" />
+													</div>
+													<div class="result-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm</h5>
+														<span class="aqua">$35.95</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="result-row">
+													<div class="result-product-image">
+														<img src="assets/images/products/product-1.png" class="result-image" />
+													</div>
+													<div class="result-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm</h5>
+														<span class="aqua">$35.95</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="result-row">
+													<div class="result-product-image">
+														<img src="assets/images/products/product-2.png" class="result-image" />
+													</div>
+													<div class="result-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm</h5>
+														<span class="aqua">$35.95</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="result-row">
+													<div class="result-product-image">
+														<img src="assets/images/products/product-3.png" class="result-image" />
+													</div>
+													<div class="result-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm</h5>
+														<span class="aqua">$35.95</span>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="result-row">
+													<div class="result-product-image">
+														<img src="assets/images/products/product-4.png" class="result-image" />
+													</div>
+													<div class="result-product-description">
+														<h5>Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm</h5>
+														<span class="aqua">$35.95</span>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="dialogue-results-summary">
+										<span>Showing 5 of 1092 results found for "Ray Ban" <a href="">See All</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</header>
+		<section class="results-page-no-banner"></section>
+
+		<!-- This search filter menu bar becomes fixed as you scroll through results, it launches the search filter dialogue, and also contains the images/names toggle -->
+		<section class="search-filter">
+			<div class="flex-grid">
+				<div class="column-4 lg-column-12">
+					<div class="search-results-title">
+						<!-- This title should be dynamic based on result returned -->
+						<h2>Childe <span class="slate nested-text">replacement lenses</span></h2>
+					</div>
+				</div>
+				<div class="column-8 lg-column-12">
+					<div class="search-filter-controls">
+						
+						<div class="refine-results-control">
+							<!-- Clicking this button will launch a JS function that opens the filter -->
+							<div class="rounded-button navy-button" id="refine-search-results-toggle">
+								<span class="button-text">Refine Results</span>
+								<span class="button-icon">
+									<!-- We use JS to embed all icons nested within buttons using the button-svg class -->
+									<img class="button-svg" src="assets/images/filter-icon.svg" />
+								</span>
+							</div>
+						</div>
+
+						<div class="display-results-control">
+							<!-- Clicking either of these buttons will launch a JS function that changes the view -->
+							<div class="toggle-button-container">
+								<div class="toggle-button left active">
+									<span>Display Images</span>
+								</div>
+								<div class="toggle-button right">
+									<span>Display By Name</span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- This is the filter module which controls which results are diplayed, how many are displayed, and orders the results -->
+		<section class="search-filter-dialogue">
+			<div class="filter-box">
+				<div class="main-filters">
+					<div class="flex-grid">
+						<div class="column-3 md-column-6 lg-column-4">
+							<div class="filter-item">
+								<label for="frame-material">Frame Material</label>
+								<select name="frame-material" class="search-filter-select">
+									<option>All Materials</option>
+									<option>Plastic</option>
+									<option>Metal</option>
+									<option>Other</option>
+								</select>
+								<div class="dropdown-arrow">
+									<img src="assets/images/arrow-down.svg" class="button-svg" />
+								</div>
+							</div>
+						</div>
+						<div class="column-3 md-column-6 lg-column-4">
+							<div class="filter-item">
+								<label for="frame-material">Frame Shape</label>
+								<select name="frame-material" class="search-filter-select">
+									<option>All Shapes</option>
+									<option>Round</option>
+									<option>Wayfarer</option>
+									<option>Square</option>
+									<option>Aviator</option>
+									<option>Other</option>
+								</select>
+								<div class="dropdown-arrow">
+									<img src="assets/images/arrow-down.svg" class="button-svg" />
+								</div>
+							</div>
+						</div>
+						<div class="column-2 md-column-6 lg-column-4">
+							<div class="filter-item">
+								<label for="frame-material">Lens Size</label>
+								<select name="frame-material" class="search-filter-select">
+									<option>All Sizes</option>
+									<option>< 45mm</option>
+									<option>46mm - 50mm</option>
+									<option>51mm - 55mm</option>
+									<option>56mm - 60mm</option>
+									<option>61mm - 65mm</option>
+									<option>> 66mm</option>
+								</select>
+								<div class="dropdown-arrow">
+									<img src="assets/images/arrow-down.svg" class="button-svg" />
+								</div>
+							</div>
+						</div>
+						<div class="column-2 md-column-6 lg-column-6">
+							<div class="filter-item">
+								<label for="frame-material">Results per page</label>
+								<select name="frame-material" class="search-filter-select">
+									<!-- make sure that these options are mutliples of 3 and 4 -->
+									<option>12</option>
+									<option>24</option>
+									<option>36</option>
+								</select>
+								<div class="dropdown-arrow">
+									<img src="assets/images/arrow-down.svg" class="button-svg" />
+								</div>
+							</div>
+						</div>
+						<div class="column-2 md-column-6 lg-column-6">
+							<div class="filter-item">
+								<label for="frame-material">Order by</label>
+								<select name="frame-material" class="search-filter-select">
+									<option>Most Popular</option>
+									<option>Alphabetical</option>
+								</select>
+								<div class="dropdown-arrow">
+									<img src="assets/images/arrow-down.svg" class="button-svg" />
+								</div>
+							</div>
+						</div>
+						<!-- This additional option is included for mobile to save space. The fucntionality is the same as the other toggle button -->
+						<div class="column-2 md-column-6 mobile-display-toggle">
+							<div class="filter-item">
+								<label for="mobile-display-toggle-select">Display results</label>
+								<select name="mobile-display-toggle-select" id="mobile-display-toggle-select-input">
+									<option>Display Images</option>
+									<option>Display By Name</option>
+								</select>
+								<div class="dropdown-arrow">
+									<img src="assets/images/arrow-down.svg" class="button-svg" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mobile-brand-link">
+					<h5>Search by brand</h5>
+					<div class="rounded-button">
+						<a href="">Find your Sunglass Brand</a>
+					</div>
+				</div>
+				<div class="filter-by-brand">
+					<!-- This element should be hidden on brand results pages, and on mobile devices - replaced with link to brand pages which should include a version of this element, but not in a fixed container (too difficult to fit on mobile) -->
+					<div class="flex-grid">
+						<div class="column-12">
+							
+							<div class="filter-by-brand-element">
+								<h5>Search by Brand</h5>
+								
+								<div class="letters-row">
+									<div class="letter">
+										<span>A</span>
+									</div>
+									<div class="letter">
+										<span>B</span>
+									</div>
+									<div class="letter">
+										<span>C</span>
+									</div>
+									<div class="letter">
+										<span>D</span>
+									</div>
+									<div class="letter">
+										<span>E</span>
+									</div>
+									<div class="letter">
+										<span>F</span>
+									</div>
+									<div class="letter">
+										<span>G</span>
+									</div>
+									<div class="letter">
+										<span>H</span>
+									</div>
+									<div class="letter">
+										<span>I</span>
+									</div>
+									<div class="letter">
+										<span>J</span>
+									</div>
+									<div class="letter">
+										<span>K</span>
+									</div>
+									<div class="letter">
+										<span>L</span>
+									</div>
+									<div class="letter">
+										<span>M</span>
+									</div>
+									<div class="letter">
+										<span>N</span>
+									</div>
+									<div class="letter">
+										<span>O</span>
+									</div>
+									<div class="letter">
+										<span>P</span>
+									</div>
+									<div class="letter">
+										<span>Q</span>
+									</div>
+									<div class="letter">
+										<span>R</span>
+									</div>
+									<div class="letter">
+										<span>S</span>
+									</div>
+									<div class="letter">
+										<span>T</span>
+									</div>
+									<div class="letter">
+										<span>U</span>
+									</div>
+									<div class="letter">
+										<span>V</span>
+									</div>
+									<div class="letter">
+										<span>W</span>
+									</div>
+									<div class="letter">
+										<span>X</span>
+									</div>
+									<div class="letter">
+										<span>Y</span>
+									</div>
+									<div class="letter">
+										<span>Z</span>
+									</div>
+									<div class="letter">
+										<span>0-9</span>
+									</div>
+								</div>
+
+								<div class="brand-names-section">
+								<!-- Clicking any of the letters should launch a query of the brand database and returns the results inside of this element -->
+									<div class="brand-query-results">
+										<!-- To keep things tidy, when the query returns results, you should disperse them in 6 unordered lists. The CSS will take care of the rest -->
+										<ul>
+											<li>Pagani</li>
+											<li>Panoptx</li>
+											<li>Pared</li>
+											<li>Patrick Cox</li>
+											<li>Paul & Joe</li>
+											<li>Paul Davids</li>
+										</ul>
+										<ul>
+											<li>Paul Frank Industries</li>
+											<li>Paul Smith</li>
+											<li>Paul Taylor</li>
+											<li>Peltor</li>
+											<li>Peppers</li>
+											<li>Persol</li>
+										</ul>
+										<ul>
+											<li>Picaso</li>
+											<li>Pilgrim</li>
+											<li>Pipel Eyewear</li>
+											<li>Pivothead</li>
+											<li>Planet</li>
+											<li>Plastic Frames</li>
+										</ul>
+										<ul>
+											<li>Proenza Schouler</li>
+											<li>Proof</li>
+											<li>Prosafe</li>
+											<li>Puma</li>
+											<li>Poppy Lissiman</li>
+											<li>Porsche</li>
+										</ul>
+										<ul>
+											<li>Prada</li>
+											<li>Preen by Thornton Bregazzi</li>
+											<li>Prego</li>
+											<li>Prism</li>
+											<li>Player</li>
+											<li>POC Do Flow</li>
+										</ul>
+										<ul>
+											<li>Polaroid</li>
+											<li>PolarOne</li>
+											<li>Police</li>
+											<li>Polo</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>		
+		
+		<!-- This is the default results view which shows images -->
+
+		<section class="results-display-section">
+			<div class="results-list">
+				<div class="flex-grid lens-results-grid">
+					<div class="lens-results-column">
+						<div class="results-item">
+							<div class="results-item-spacer"></div>
+							<div class="results-item-content">
+								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
+								<div class="product-image-container">
+									<img src="assets/images/products/product-1.png" />
+								</div>
+								<span class="product-title">Ray Ban RB3467 | 56mm</span>
+								<span class="product-price aqua">From $35.95</span>
+							</div>
+						</div>
+					</div>
+					<div class="lens-results-column">
+						<div class="results-item">
+							<div class="results-item-spacer"></div>
+							<div class="results-item-content">
+								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
+								<div class="product-image-container">
+									<img src="assets/images/products/product-3.png" />
+								</div>
+								<span class="product-title">Ray Ban RB3467 | 56mm</span>
+								<span class="product-price aqua">From $35.95</span>
+							</div>
+						</div>
+					</div>
+					<div class="lens-results-column">
+						<div class="results-item">
+							<div class="results-item-spacer"></div>
+							<div class="results-item-content">
+								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
+								<div class="product-image-container">
+									<img src="assets/images/products/product-4.png" />
+								</div>
+								<span class="product-title">Quiksilver Brigade | 56mm</span>
+								<span class="product-price aqua">From $35.95</span>
+							</div>
+						</div>
+					</div>
+					<div class="lens-results-column">
+						<div class="results-item">
+							<div class="results-item-spacer"></div>
+							<div class="results-item-content">
+								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
+								<div class="product-image-container">
+									<img src="assets/images/products/product-2.png" />
+								</div>
+								<span class="product-title">Ray Ban RB3467 | 56mm</span>
+								<span class="product-price aqua">From $35.95</span>
+							</div>
+						</div>
+					</div>
+					<div class="lens-results-column">
+						<div class="results-item">
+							<div class="results-item-spacer"></div>
+							<div class="results-item-content">
+								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
+								<div class="product-image-container">
+									<img src="assets/images/products/product-1.png" />
+								</div>
+								<span class="product-title">Ray Ban RB3467 | 56mm</span>
+								<span class="product-price aqua">From $35.95</span>
+							</div>
+						</div>
+					</div>
+					<div class="lens-results-column">
+						<div class="results-item">
+							<div class="results-item-spacer"></div>
+							<div class="results-item-content">
+								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
+								<div class="product-image-container">
+									<img src="assets/images/products/product-3.png" />
+								</div>
+								<span class="product-title">Ray Ban RB3467 | 56mm</span>
+								<span class="product-price aqua">From $35.95</span>
+							</div>
+						</div>
+					</div>
+					<div class="lens-results-column">
+						<div class="results-item">
+							<div class="results-item-spacer"></div>
+							<div class="results-item-content">
+								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
+								<div class="product-image-container">
+									<img src="assets/images/products/product-4.png" />
+								</div>
+								<span class="product-title">Quiksilver Brigade | 56mm</span>
+								<span class="product-price aqua">From $35.95</span>
+							</div>
+						</div>
+					</div>
+					<div class="lens-results-column">
+						<div class="results-item">
+							<div class="results-item-spacer"></div>
+							<div class="results-item-content">
+								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
+								<div class="product-image-container">
+									<img src="assets/images/products/product-2.png" />
+								</div>
+								<span class="product-title">Ray Ban RB3467 | 56mm</span>
+								<span class="product-price aqua">From $35.95</span>
+							</div>
+						</div>
+					</div>
+					<div class="lens-results-column">
+						<div class="results-item">
+							<div class="results-item-spacer"></div>
+							<div class="results-item-content">
+								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
+								<div class="product-image-container">
+									<img src="assets/images/products/product-1.png" />
+								</div>
+								<span class="product-title">Ray Ban RB3467 | 56mm</span>
+								<span class="product-price aqua">From $35.95</span>
+							</div>
+						</div>
+					</div>
+					<div class="lens-results-column">
+						<div class="results-item">
+							<div class="results-item-spacer"></div>
+							<div class="results-item-content">
+								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
+								<div class="product-image-container">
+									<img src="assets/images/products/product-3.png" />
+								</div>
+								<span class="product-title">Ray Ban RB3467 | 56mm</span>
+								<span class="product-price aqua">From $35.95</span>
+							</div>
+						</div>
+					</div>
+					<div class="lens-results-column">
+						<div class="results-item">
+							<div class="results-item-spacer"></div>
+							<div class="results-item-content">
+								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
+								<div class="product-image-container">
+									<img src="assets/images/products/product-4.png" />
+								</div>
+								<span class="product-title">Quiksilver Brigade | 56mm</span>
+								<span class="product-price aqua">From $35.95</span>
+							</div>
+						</div>
+					</div>
+					<div class="lens-results-column">
+						<div class="results-item">
+							<div class="results-item-spacer"></div>
+							<div class="results-item-content">
+								<span class="preheader">Sunglass Fix <br /> Lenses for</span>
+								<div class="product-image-container">
+									<img src="assets/images/products/product-2.png" />
+								</div>
+								<span class="product-title">Ray Ban RB3467 | 56mm</span>
+								<span class="product-price aqua">From $35.95</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- This is the page navigation for this section -->
+			<div class="results-list-navigation">
+				<div class="flex-grid">
+					<div class="column-2 lg-column-12">
+						<div class="results-summary">
+							<span>Showing 1-12 of 176</span>
+						</div>
+					</div>
+					<div class="column-8 lg-column-12">
+						<div class="results-list-navigation-element">
+							<div class="previous-page-link">
+								<div class="link-wrapper">
+									<img src="assets/images/previous-arrow.svg" class="button-svg" />
+									<span>Previous Page</span>
+								</div>
+							</div>
+							<div class="page-numbers">
+								<ul>
+									<li class="current-page">1</li>
+									<li>2</li>
+									<li class="no-link">...</li>
+									<li>14</li>
+								</ul>
+							</div>
+							<div class="next-page-link">
+								<div class="link-wrapper">
+									<span>Next Page</span>
+									<img src="assets/images/next-arrow.svg" class="button-svg" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column-2 lg-column-hide"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- This is the name results view which is hidden by default. It is visible when the toggle is activated -->
+		
+		<section class="results-display-by-name hidden">
+			<div class="flex-grid">
+				<div class="column-3 lg-column-6 md-column-12">
+					<ul class="results-list-names">
+						<li><a href="#">31 thirteen 53mm</a></li>
+						<li><a href="#">A-Wire 1.0 54mm</a></li>
+						<li><a href="#">A-Wire 2.0 54mm</a></li>
+						<li><a href="#">A-Wire 2.0 54mm</a></li>
+						<li><a href="#">A-Wire 2.0 Thick 54mm</a></li>
+						<li><a href="#">A-Wire Thick 54mm</a></li>
+						<li><a href="#">Abandon 60mm</a></li>
+						<li><a href="#">Abandon (Asian Fit) 59mm</a></li>
+						<li><a href="#">Backhand 57mm</a></li>
+						<li><a href="#">Backhand OO9178 59mm</a></li>
+						<li><a href="#">BD5949 65mm</a></li>
+						<li><a href="#">Beckon OO9125 59mm</a></li>
+						<li><a href="#">Beckon OO9125 60mm</a></li>
+						<li><a href="#">Behave OO4003 65mm</a></li>
+						<li><a href="#">Belong 64mm</a></li>
+						<li><a href="#">Betray 64mm</a></li>
+						<li><a href="#">Betray (Asian Fit) 64mm</a></li>
+						<li><a href="#">Big Square Wire 57mm</a></li>
+						<li><a href="#">Big Taco OO9173 62mm</a></li>
+						<li><a href="#">Blender OO4059 59mm</a></li>
+						<li><a href="#">Bottle Rocket OO9164 62mm</a></li>
+						<li><a href="#">Bottlecap 62mm</a></li>
+						<li><a href="#">Bottlecap 58mm</a></li>
+						<li><a href="#">Bracket 8.1 55mm</a></li>
+						<li><a href="#">Breadbox OO9199 56mm</a></li>
+						<li><a href="#">Break Point OO9168 62mm</a></li>
+						<li><a href="#">C-Wire 54mm</a></li>
+						<li><a href="#">C-Wire 61mm</a></li>
+						<li><a href="#">Canteen 57mm</a></li>
+						<li><a href="#">Canteen OO9225 60mm</a></li>
+						<li><a href="#">Carbon Blade OO9174 66mm</a></li>
+						<li><a href="#">Carbon Shift OO9302 62mm</a></li>
+						<li><a href="#">Catalyst OO9272 56mm</a></li>
+						<li><a href="#">Caveat OO4054 60mm</a></li>
+						<li><a href="#">Chainlink OO9247 57mm</a></li>
+						<li><a href="#">Chainlink OO9252 57mm</a></li>
+						<li><a href="#">Cohort OO9301 62mm</a></li>
+						<li><a href="#">Coilover OX5043 51mm</a></li>
+						<li><a href="#">Coin OX5071 54mm</a></li>
+						<li><a href="#">Commit AV9108 62mm</a></li>
+						<li><a href="#">Commit SQ 62mm</a></li>
+						<li><a href="#">Conductor 6 OO4106 58mm</a></li>
+						<li><a href="#">Conductor 8 OO4107 60mm</a></li>
+					</ul>
+				</div>
+				<div class="column-3 lg-column-6 md-column-12">
+					<ul class="results-list-names">
+						<li><a href="#">Confront OO2024 58mm</a></li>
+						<li><a href="#">Convey OX1059 51mm</a></li>
+						<li><a href="#">Corkscrew 4.0 53mm</a></li>
+						<li><a href="#">Correspondent OO9094 61mm</a></li>
+						<li><a href="#">Cover Story OO4042 62mm</a></li>
+						<li><a href="#">Crankcase OO9165 56mm</a></li>
+						<li><a href="#">Crankshaft OO9239 60mm</a></li>
+						<li><a href="#">Crosshair 60mm</a></li>
+						<li><a href="#">Crosshair 1.0 60mm</a></li>
+						<li><a href="#">Crosshair 2.0 63mm</a></li>
+						<li><a href="#">Crosshair 3 OO6014 61mm</a></li>
+						<li><a href="#">Crosshair OO4060 61mm</a></li>
+						<li><a href="#">Crosshair S 59mm</a></li>
+						<li><a href="#">Crosslink OX8048 56mm</a></li>
+						<li><a href="#">Crossrange OO9361 57mm</a></li>
+						<li><a href="#">Crossrange Patch OO9382 60mm</a></li>
+						<li><a href="#">Crossrange R OO9359 57mm</a></li>
+						<li><a href="#">Crossrange XL OO9360 57mm</a></li>
+						<li><a href="#">Daisy Chain OO4062 60mm</a></li>
+						<li><a href="#">Dangerous 60mm</a></li>
+						<li><a href="#">Dangerous 57mm</a></li>
+						<li><a href="#">Det Cord OO025 61mm</a></li>
+						<li><a href="#">Deviation OO4061 59mm</a></li>
+						<li><a href="#">Diecutter OO4137 55mm</a></li>
+						<li><a href="#">Disclosure 58mm</a></li>
+						<li><a href="#">Disclosure OO4110 58mm</a></li>
+						<li><a href="#">Discreet OO2012 58mm</a></li>
+						<li><a href="#">Disguise OO2030 58mm</a></li>
+						<li><a href="#">Disobey 60mm</a></li>
+						<li><a href="#">Dispatch II OO9150 61mm</a></li>
+						<li><a href="#">Dispatch OO9090 62mm</a></li>
+						<li><a href="#">Dispute OO9233 61mm</a></li>
+						<li><a href="#">Double Edge OO9380 66mm</a></li>
+						<li><a href="#">Drizzle OO9159 61mm</a></li>
+						<li><a href="#">Drop In OO9232 58mm</a></li>
+						<li><a href="#">Drop Point OO9367 61mm</a></li>
+						<li><a href="#">E Wire 56mm</a></li>
+						<li><a href="#">E Wire 2.1 51mm</a></li>
+						<li><a href="#">E Wire Generation 2 56mm</a></li>
+						<li><a href="#">Elmont L OO4119 60mm</a></li>
+						<li><a href="#">Elmont M OO4119 58mm</a></li>
+						<li><a href="#">Embrace 60mm</a></li>
+						<li><a href="#">Embrace (Asian Fit) 57mm</a></li>
+					</ul>
+				</div>
+				<div class="column-3 lg-column-6 md-column-12">
+					<ul class="results-list-names">
+						<li><a href="#">Encounter OO9091 58mm</a></li>
+						<li><a href="#">Enduro OO9223 55mm</a></li>
+						<li><a href="#">Eternal 62mm</a></li>
+						<li><a href="#">Eye Jacket 62mm</a></li>
+						<li><a href="#">Eye Jacket 58mm</a></li>
+						<li><a href="#">Eye Jacket 58mm</a></li>
+						<li><a href="#">Eye Jacket 2.0 54mm</a></li>
+						<li><a href="#">Eye Patch 64mm</a></li>
+						<li><a href="#">EyePatch 2 OO9136 64mm</a></li>
+						<li><a href="#">Fast Jacket OO9097 71mm</a></li>
+						<li><a href="#">Fast Jacket OO9156 71mm</a></li>
+						<li><a href="#">Fat Cat OX1041 54mm</a></li>
+						<li><a href="#">Fate 51mm</a>
+						<li><a href="#">Feedback OO4079 59mm</a>
+						<li><a href="#">Felon 58mm</a>
+						<li><a href="#">Fenceline OX8069 53mm</a>
+						<li><a href="#">Five Squared OO9238 54mm</a>
+						<li><a href="#">Fives 2.0 53mm</a>
+						<li><a href="#">Fives 3.0 54mm</a>
+						<li><a href="#">Fives 4.0 54mm</a>
+						<li><a href="#">Fives Late 1990s 53mm</a>
+						<li><a href="#">Fives Squared 54mm</a>
+						<li><a href="#">Fives XS 49mm</a></li>
+						<li><a href="#">Flak 63mm</a></li>
+						<li><a href="#">Flak 2.0 OO9295 59mm</a></li>
+						<li><a href="#">Flak 2.0 XL OO9188 59mm</a></li>
+						<li><a href="#">Flak Jacket 63mm</a></li>
+						<li><a href="#">Flak Jacket 56mm</a></li>
+						<li><a href="#">Flak Jacket XLJ 63mm</a></li>
+						<li><a href="#">Flak XLJ 63mm</a></li>
+						<li><a href="#">Flaunt OO9083 57mm</a></li>
+						<li><a href="#">Flawless 2.0 50mm</a></li>
+						<li><a href="#">Forehand OO9179 57mm</a></li>
+						<li><a href="#">Four S 47mm</a></li>
+						<li><a href="#">Fringe 60mm</a></li>
+						<li><a href="#">Fringe OO9124 59mm</a></li>
+						<li><a href="#">Frogskin Collectors 55mm</a></li>
+						<li><a href="#">Frogskin OO9013 55mm</a></li>
+						<li><a href="#">Frogskins (New) 60mm</a></li>
+						<li><a href="#">Frogskins Early 54mm</a></li>
+						<li><a href="#">Frogskins Gen 3 55mm</a></li>
+						<li><a href="#">Frogskins Lite OO9374 63mm</a></li>
+						<li><a href="#">Frogskins LX OO2043 55mm</a></li>
+					</ul>
+				</div>
+				<div class="column-3 lg-column-6 md-column-12">
+					<ul class="results-list-names">
+						<li><a href="#">Fuel Cell 65mm</a></li>
+						<li><a href="#">Fuel Cell 009096 60mm</a></li>
+						<li><a href="#">Game Changer OO9291 58mm</a></li>
+						<li><a href="#">Garage Rock OO9175 55mm</a></li>
+						<li><a href="#">Gascan 60mm</a></li>
+						<li><a href="#">Gascan 55mm</a></li>
+						<li><a href="#">Gascan 57mm</a></li>
+						<li><a href="#">Gascan S 57mm</a></li>
+						<li><a href="#">Gasket OX1012 52mm</a></li>
+						<li><a href="#">Gauge 6 OO6038 57mm</a></li>
+						<li><a href="#">Gauge 8 OO4124 57mm</a></li>
+						<li><a href="#">Gauge 8 OO4124 62mm</a></li>
+						<li><a href="#">Grapevine 64mm</a></li>
+						<li><a href="#">Half Jacket 60mm</a></li>
+						<li><a href="#">Half Jacket 2.0 OO9144 62mm</a></li>
+						<li><a href="#">Half Jacket 2.0 OO9154 62mm</a></li>
+						<li><a href="#">Half Jacket XLJ 60mm</a></li>
+						<li><a href="#">Half Wife 1.0 54mm</a></li>
+						<li><a href="#">Half Wire 54mm</a></li>
+						<li><a href="#">Half Wire 2.0 57mm</a></li>
+						<li><a href="#">Half Wire Original 53mm</a></li>
+						<li><a href="#">Halflink OO9251 61mm</a></li>
+						<li><a href="#">Hall Pass OO9203 56mm</a></li>
+						<li><a href="#">Halo 49mm</a></li>
+						<li><a href="#">Hatchet 55mm</a></li>
+						<li><a href="#">Hijinx Ducati OO9021 64mm</a></li>
+						<li><a href="#">Hijinx OO9021 64mm</a></li>
+						<li><a href="#">Hinder OO4043 62mm</a></li>
+						<li><a href="#">Holbrook LX OO2038 57mm</a></li>
+						<li><a href="#">Holbrook LX OO2048 56mm</a></li>
+						<li><a href="#">Holbrook Metal OO4123 55mm</a></li>
+						<li><a href="#">Holbrook Mix OO9384 57mm</a></li>
+						<li><a href="#">Holbrook OO9102 57mm</a></li>
+						<li><a href="#">Holbrook OO9102 55mm</a></li>
+						<li><a href="#">Holbrook OO9244 56mm</a></li>
+						<li><a href="#">Holbrook R OO9377 55mm</a></li>
+						<li><a href="#">Holbrook XL OO9417 59mm</a></li>
+						<li><a href="#">Hold On OO9298 58mm</a></li>
+						<li><a href="#">Hold Out OO9357 55mm</a></li>
+						<li><a href="#">Holston OO9334 58mm</a></li>
+						<li><a href="#">Ice Pick 67mm</a></li>
+						<li><a href="#">Ice Pick 63mm</a></li>
+						<li><a href="#">Inmate 65mm</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- This area also has its own navigation as by default it should show a lot more results than the images section -->
+			<div class="results-list-navigation display-by-name-navigation">
+				<div class="flex-grid">
+					<div class="column-2 lg-column-12">
+						<div class="results-summary">
+							<span>Showing 1-96 of 176</span>
+						</div>
+					</div>
+					<div class="column-8 lg-column-12">
+						<div class="results-list-navigation-element">
+							<div class="previous-page-link">
+								<div class="link-wrapper">
+									<img src="assets/images/previous-arrow.svg" class="button-svg" />
+									<span>Previous Page</span>
+								</div>
+							</div>
+							<div class="page-numbers">
+								<ul>
+									<li class="current-page">1</li>
+									<li>2</li>
+								</ul>
+							</div>
+							<div class="next-page-link">
+								<div class="link-wrapper">
+									<span>Next Page</span>
+									<img src="assets/images/next-arrow.svg" class="button-svg" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column-2 lg-column-hide"></div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- This is the site footer which is common accross all pages -->
+	<footer class="site-footer">
+		<section class="social-media-footer-section">
+			<div class="flex-grid">
+				<div class="column-3 md-column-12">
+					<div class="social-media-intro">
+						<h3>Follow us</h3>
+						<p>Our social media channels are full of inspiration, useful information, promotions and special offers. Join our community today!</p>
+					</div>
+				</div>
+				<div class="column-3 md-column-4">
+					<div class="social-link-box third-social-box">
+						<div class="social-link-bg-image" style="background-image:url('assets/images/instagram-bg.png');"></div>
+						<div class="social-link-overlay">
+							<a target="_blank" href="https://www.instagram.com/sunglassfix/">
+								<img src="assets/images/instagram-white.svg" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="column-3 md-column-4">
+					<div class="social-link-box second-social-box">
+						<div class="social-link-bg-image" style="background-image:url('assets/images/facebook-bg.png');"></div>
+						<div class="social-link-overlay">
+							<a target="_blank" href="https://www.facebook.com/thesunglassfix/">
+								<img src="assets/images/facebook-white.svg" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="column-3 md-column-4">
+					<div class="social-link-box third-social-box">
+						<div class="social-link-bg-image" style="background-image:url('assets/images/youtube-bg.png');"></div>
+						<div class="social-link-overlay">
+							<a target="_blank" href="https://www.youtube.com/user/thesunglassfix">
+								<img src="assets/images/youtube-white.svg" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="contact-section">
+			<div class="flex-grid">
+				<div class="column-6 md-column-12 lg-column-8">
+					<div class="contact-details">
+						<h3>Contact Sunglass Fix</h3>
+						<div class="contact-items">
+							<div class="contact-phone">
+								<img src="assets/images/footer-icons/phone.svg" />
+								<p><a href="tel: 1800 786 349">1800 786 349</a></p>
+							</div>
+							<div class="contact-mail">
+								<img src="assets/images/footer-icons/mail.svg" />
+								<p><a href="mailto:info@thesunglassfix.com.au">info@thesunglassfix.com.au</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column-6 md-column-12 lg-column-4">
+					<div class="review-details">
+						<h3>Independent Reviews</h3>
+						<div class="review-items">
+							<a href="" class="review-link">
+								<img src="assets/images/footer-icons/facebook.svg" />
+							</a>
+							<a href="" class="review-link">
+								<img src="assets/images/footer-icons/google.svg" />
+							</a>
+							<a href="" class="review-link">
+								<img src="assets/images/footer-icons/product-review.svg" />
+							</a>
+							<a href="" class="review-link">
+								<img src="assets/images/footer-icons/yelp.svg" />
+							</a>
+							<a href="" class="review-link">
+								<img src="assets/images/footer-icons/trustpilot.svg" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="lower-footer">
+
+			<div class="flex-grid">
+				<div class="column-3 lg-column-6">
+					<div class="lower-footer-link-section">
+						<h4>The Sunglass Fix</h4>
+						<ul class="lower-footer-links">
+							<li>
+								<a href="">About Us</a>
+							</li>
+							<li>
+								<a href="">Awards</a>
+							</li>
+							<li>
+								<a href="">Brands</a>
+							</li>
+							<li>
+								<a href="">Reviews</a>
+							</li>
+							<li>
+								<a href="">Sitemap</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="column-3 lg-column-6">
+					<div class="lower-footer-link-section">
+						<h4>Customer Service</h4>
+						<ul class="lower-footer-links">
+							<li>
+								<a href="">Contact Us</a>
+							</li>
+							<li>
+								<a href="">My Account</a>
+							</li>
+							<li>
+								<a href="">Order History</a>
+							</li>
+							<li>
+								<a href="">Returns & Exchanges</a>
+							</li>
+							<li>
+								<a href="">Payment Options</a>
+							</li>
+							<li>
+								<a href="">Shipping Information</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="column-3 lg-column-6">
+					<div class="lower-footer-link-section">
+						<h4>Support</h4>
+						<ul class="lower-footer-links">
+							<li>
+								<a href="">FAQ's</a>
+							</li>
+							<li>
+								<a href="">Finding Model and Size</a>
+							</li>
+							<li>
+								<a href="">How to Install Lenses</a>
+							</li>
+							<li>
+								<a href="">Sunglass Repair Tips</a>
+							</li>
+							<li>
+								<a href="">Terms and Conditions</a>
+							</li>
+							<li>
+								<a href="">Our Privacy Policy</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="column-3 lg-column-6">
+					<div class="lower-footer-link-section">
+						<h4>Featured Brands</h4>
+						<ul class="lower-footer-links">
+							<li>
+								<a href="">Ray Ban</a>
+							</li>
+							<li>
+								<a href="">Oakley</a>
+							</li>
+							<li>
+								<a href="">Arnette</a>
+							</li>
+							<li>
+								<a href="">Maui Jim</a>
+							</li>
+							<li>
+								<a href="">Prada</a>
+							</li>
+							<li>
+								<a href="">Otis</a>
+							</li>
+							<li>
+								<a href="">Dragon</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<section class="footer-details">
+			<div class="flex-grid">
+				<div class="column-4 md-column-12 md-order-1">
+					<div class="footer-info-text">
+						<span>Copyright © 2006 - 2020 The Sunglass Fix PTY LTD</span>
+					</div>
+				</div>
+				<div class="column-4 md-column-12 md-order-0">
+					<div class="footer-logo">
+						<img src="assets/images/sunglass-fix-logo-white.svg" alt="Sunglass Fix Logo"/>
+					</div>
+				</div>
+				<div class="column-4 md-column-12 md-order-2">
+					<div class="footer-payment-logos">
+						<div class="footer-payment-icon">
+							<img src="assets/images/visa.svg" alt="Visa Accepted" />
+						</div>
+						<div class="footer-payment-icon">
+							<img src="assets/images/mastercard.svg" alt="Mastercard Accepted" />
+						</div>
+						<div class="footer-payment-icon">
+							<img src="assets/images/paypal.svg" alt="Paypal Accepted" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</footer>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+	<script src="js/min/all.js"></script>
+	
+</body>
+
+</html>

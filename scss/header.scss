@@ -1081,6 +1081,22 @@
 			top: 1rem;
 			z-index: 100;
 
+			.cart-link {
+				svg {
+					path {
+						fill: $navy;
+					}
+				}
+			}
+			
+			.cart-link.colour-change {
+				svg {
+					path {
+						fill: $white;
+					}
+				}
+			}
+
 			.cart-link.scrolled {
 				svg {
 					path {
