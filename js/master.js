@@ -127,7 +127,6 @@ $('.close-search-dialogue').click(function(){
 under this filter element to the new page layout */
 
 var header_height = $('.site-header').outerHeight();
-console.log(header_height);
 var distance = $('.search-filter').offset().top - header_height;
 var search_filter_height = $('.search-filter').height();
 var total_header_height = header_height + search_filter_height;
