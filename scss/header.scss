@@ -1,5 +1,9 @@
 @import 'variables.scss';
 
+.ui-loader {
+	display: none!important;
+}
+
 .site-header {
 	position: fixed;
 	width: 100%;
