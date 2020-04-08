@@ -518,3 +518,22 @@ $(".lens-colour-select .lens-colour-option").click(function() {
     return false;
 });
 
+// Modals on the product page
+
+$('.lens-type-modal-trigger').click(function(){
+    $('.product-modals').addClass('active');
+    $('.lens-type-modal-container').addClass('active');
+});
+
+$('.modal-background').click(function(){
+    $('.product-modals').removeClass('active');
+    $('.lens-type-modal-container').addClass('active');
+});
+
+$('.close-modal-button').click(function(){
+    $('.product-modals').removeClass('active');
+    $('.lens-type-modal-container').addClass('active');
+});
+
+
+

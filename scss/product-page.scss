@@ -556,6 +556,16 @@
 		}
 	}
 
+	@media screen and (max-width: $mobile-break){
+		.heading-area {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			width: 100%;
+			padding-bottom: 1.25rem;
+		}
+	}
+
 	/* Lens Type */
 
 	.choose-lens-type {
@@ -614,6 +624,7 @@
 
 	.choose-lens-colour-section {
 		padding-right: 1.25rem;
+		position: relative;
 
 		.lens-colour-select {
 
@@ -623,7 +634,6 @@
 			
 			.lens-colour-option {
 				width: 2.5rem;
-				max-width: 2.5rem;
 				height: 2.5rem;
 				border-radius: 50%;
 				background-color: black;
@@ -740,6 +750,26 @@
 	@media screen and (max-width: $tablet-break) { 
 		.choose-lens-colour-section {
 			padding-right: 0;
+
+			.lens-colour-select {
+				justify-content: center;
+
+				.lens-colour-option.selected {
+					width: 2.5rem;
+					border-radius: 50%;
+				}
+
+				.lens-colour-option {
+					.inner-elements {
+						position: absolute;
+						left: -0.65rem;
+
+						.name {
+							display: none;
+						}
+					}
+				}
+			}	
 		}
 	}
 
@@ -1027,5 +1057,87 @@
 			outline: 0;
 		}
 	}
+}
+
+/* Modals */
+
+.product-modals {
+	display: none;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 500;
+
+	.modal-background {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,0.6);
+	}
+
+	.lens-type-modal-container {
+		position: absolute;
+		display: none;
+		background-color: $white;
+		border-radius: 1rem;
+		width: calc(80% - 5rem);
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 2.5rem;
+		z-index: 550;
+		margin-top: 2.5rem;
+		max-height: calc(100vh - 10rem);
+		overflow-y: scroll;
+
+
+		.close-modal-button {
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			cursor: pointer;
+		}
+
+		.table-container {
+			overflow-x: auto;
+		}
+
+		.lens-type-comparison-table {
+			width: 100%;
+			border: 1px solid black;
+			border-collapse: collapse;
+			border-radius: 1rem;
+
+			th, td {
+  				border: 1px solid $light-grey;
+  				text-align: left;
+  				padding: 0.75rem;
+  				vertical-align: middle;
+			}
+		}
+
+		@media screen and (max-width: $tablet-break){
+			.lens-type-comparison-table {
+				min-width: 28rem;
+				overflow-x: scroll;
+			}
+		}
+	}
+
+	@media screen and (max-width: $tablet-break){
+		.lens-type-modal-container {
+			width: calc(90% - 5rem);
+		}
+	}
+}
+
+.product-modals.active {
+	display: block;
+}
+
+.lens-type-modal-container.active {
+	display: block;
 }
 
