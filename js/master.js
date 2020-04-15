@@ -271,13 +271,25 @@ $('.product-carousel-purchase-section').css('top', header_height);
 /* Alter the width of the thumbnail carousel container based on the number of image */
 
 if($('.product-carousel-thumbnail-navigation').length){
-    count = $(".product-carousel-thumbnails .thumbnail-image").length;
-    width = count * 3;
+    slideCount = $(".product-carousel-thumbnails .thumbnail-image").length;
+    width = slideCount * 3;
     thumbnail_container_width = width + "rem";
     $('.product-carousel-thumbnail-navigation').css('width', thumbnail_container_width)
 }
 
 /* Control the carousel and thumbnails with Slick Slider */
+
+if(slideCount > 6){
+    sliderShowValue = 6;
+    sliderScrollValue = 1;
+    centreModeValue = true;
+    infiniteValue = true;
+} else {
+    sliderShowValue = slideCount;
+    sliderScrollValue = slideCount;
+    centreModeValue = false;
+    infiniteValue = false;
+}
 
 $('.product-carousel-images').slick({
     asNavFor: '.product-carousel-thumbnails',
@@ -288,13 +300,13 @@ $('.product-carousel-images').slick({
 
 $('.product-carousel-thumbnails').slick({
     asNavFor: '.product-carousel-images',
-    slidesToScroll: 1,
-    slidesToScroll: 1,
+    slidesToScroll: sliderScrollValue,
+    slidesToShow: sliderShowValue,
     focusOnSelect: true,
-    infinite: true,
+    infinite: infiniteValue,
     arrows: false,
-    variableWidth: true,
-    centreMode: true,
+    variableWidth: false,
+    centreMode: centreModeValue,
     draggable: false,
 });
 
