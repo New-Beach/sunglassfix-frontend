@@ -547,19 +547,22 @@
 					<div class="landing-page-slider-container">
 						
 						<div class="landing-page-slider">
-							<!-- An example of a video slides, note the additional classes -->
+							<!-- An example of a video slides, note the additional classes. The dark-text class will make sure the contrast between the text and image will stand ou on light images, and the light-text class will make sure that the contrast will work on dark images. -->
 							<div class="landing-page-slide video-content dark-text">
+								<!-- This padding only appears on mobile and is coloured the same as the background colour of the slide image or video -->
 								<div class="mobile-top-spacer slide-1-background"></div>
 								<div class="background-element background-video">
 									<video class="lens-installation-videos" autoplay muted list="nodownload nofullscreen" poster="assets/images/slider-video-cover.jpg">
 										<source src="assets/videos/instruction-video-slide.mp4" type="video/mp4">
 									</video>
 								</div>
+								<!-- On desktop this area overlays the image or the video, but from small desktop screens and down, it becomes a static element with a background colour the same as the video or image and sits underneath the video / image -->
 								<div class="overlaying-content slide-1-background">
 									<div class="flex-grid">
 										<div class="column-8 lg-column-12">
 											<div class="slide-title-container">
-													<h2 class="slide-title">G<span class="accent lens-letter">oo</span>d as new</h2>
+												<!-- For slide titles that have two consecutive O's we csn use the custom font to replace those O's with the circles. Not much needs to change for these titles on smaller screens-->
+												<h2 class="slide-title">G<span class="accent lens-letter">oo</span>d as new</h2>
 											</div>
 										</div>
 										<div class="column-4 lg-column-12">
@@ -568,6 +571,7 @@
 													<h3><span class="accent">Custom cut lenses</span> to order for any sunglass style and brand.</h3>
 												</div>
 												<div class="cta-wrapper">
+													<!-- This button launches the search bar dialogue -->
 													<div class="rounded-button orange-button activate-search-dialogue">
 														<a href="#">Search for your lenses</a>
 													</div>
@@ -577,7 +581,7 @@
 									</div>
 								</div>
 							</div>
-							
+							<!-- Here is a second slide and an example of the image slide with light text -->
 							<div class="landing-page-slide image-content light-text">
 								<div class="mobile-top-spacer slide-2-background"></div>
 								<div class="background-element background-image"
@@ -586,6 +590,7 @@
 								<div class="overlaying-content slide-2-background">
 									<div class="flex-grid">
 										<div class="column-8 lg-column-12">
+											<!-- The vertical text element will only work properly on large desktops as the element takes up a lot of room. On smaller screens we change the text back to the regular left to right format, and remove the special characters which align the two O's. -->
 											<div class="slide-title-container vertical-text">
 												<h2 class="slide-title vertical">besp<span class="accent lens-letter">o</span>ke </h2>
 												<h2 class="slide-title second-line vertical"><span class="accent lens-letter">o</span>ptics</h2>
