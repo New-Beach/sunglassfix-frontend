@@ -6,6 +6,7 @@
     2. Header Scripts
     3. Results Page Scripts (Including Brand Page Scripts)
     4. Product Page Scripts
+    5. Landing Page Scripts
 
 
 /* 
@@ -114,6 +115,10 @@ $(window).on('scroll', function() {
         $('.cart-link').removeClass('scrolled');
         if(transparent_header = true){
            $('.transparent-toggle').addClass('transparent-bg'); 
+        }
+        if($('.navigation-search-bar').hasClass('scroll-callback')){
+            $('.navigation-search-bar').addClass('transparent-toggle');
+            $('.navigation-search-bar').addClass('transparent-bg');
         }
     }
 });
@@ -271,64 +276,64 @@ $('.product-carousel-purchase-section').css('top', header_height);
 /* Alter the width of the thumbnail carousel container based on the number of image */
 
 if($('.product-carousel-thumbnail-navigation').length){
+    
     slideCount = $(".product-carousel-thumbnails .thumbnail-image").length;
     width = slideCount * 3;
     thumbnail_container_width = width + "rem";
-    $('.product-carousel-thumbnail-navigation').css('width', thumbnail_container_width)
-}
+    $('.product-carousel-thumbnail-navigation').css('width', thumbnail_container_width);
 
-/* Control the carousel and thumbnails with Slick Slider */
-
-if(slideCount > 6){
-    sliderShowValue = 6;
-    sliderScrollValue = 1;
-    centreModeValue = true;
-    infiniteValue = true;
-} else {
-    sliderShowValue = slideCount;
-    sliderScrollValue = slideCount;
-    centreModeValue = false;
-    infiniteValue = false;
-}
-
-$('.product-carousel-images').slick({
-    asNavFor: '.product-carousel-thumbnails',
-    prevArrow: $('.previous-image-link'),
-    nextArrow: $('.next-image-link'),
-    draggable: false,
-});
-
-$('.product-carousel-thumbnails').slick({
-    asNavFor: '.product-carousel-images',
-    slidesToScroll: sliderScrollValue,
-    slidesToShow: sliderShowValue,
-    focusOnSelect: true,
-    infinite: infiniteValue,
-    arrows: false,
-    variableWidth: false,
-    centreMode: centreModeValue,
-    draggable: false,
-});
-
-/* Make the fixed element absolute if screen size is to keep it fixed on the screen */
-
-if($('.product-carousel-purchase-section').length){
-    
-    fixed_product_summary = $('.product-carousel-purchase-section').height();
-    min_browser_height = fixed_product_summary + header_height;
-
-    function switchMobileLayout() {
-        var browser_height = $(window).height();
-        if(browser_height < min_browser_height){
-           $('.product-carousel-purchase-section').addClass('mobile-layout'); 
-        } else {
-           $('.product-carousel-purchase-section').removeClass('mobile-layout'); 
-        }
+    /* Control the carousel and thumbnails with Slick Slider */
+    if(slideCount > 6){
+        sliderShowValue = 6;
+        sliderScrollValue = 1;
+        centreModeValue = true;
+        infiniteValue = true;
+    } else {
+        sliderShowValue = slideCount;
+        sliderScrollValue = slideCount;
+        centreModeValue = false;
+        infiniteValue = false;
     }
-    switchMobileLayout();
-    $(window).resize(function(){
-        switchMobileLayout();
+
+    $('.product-carousel-images').slick({
+        asNavFor: '.product-carousel-thumbnails',
+        prevArrow: $('.previous-image-link'),
+        nextArrow: $('.next-image-link'),
+        draggable: false,
     });
+
+    $('.product-carousel-thumbnails').slick({
+        asNavFor: '.product-carousel-images',
+        slidesToScroll: sliderScrollValue,
+        slidesToShow: sliderShowValue,
+        focusOnSelect: true,
+        infinite: infiniteValue,
+        arrows: false,
+        variableWidth: false,
+        centreMode: centreModeValue,
+        draggable: false,
+    });
+
+    /* Make the fixed element absolute if screen size is to keep it fixed on the screen */
+
+    if($('.product-carousel-purchase-section').length){
+        
+        fixed_product_summary = $('.product-carousel-purchase-section').height();
+        min_browser_height = fixed_product_summary + header_height;
+
+        function switchMobileLayout() {
+            var browser_height = $(window).height();
+            if(browser_height < min_browser_height){
+               $('.product-carousel-purchase-section').addClass('mobile-layout'); 
+            } else {
+               $('.product-carousel-purchase-section').removeClass('mobile-layout'); 
+            }
+        }
+        switchMobileLayout();
+        $(window).resize(function(){
+            switchMobileLayout();
+        });
+    }
 }
 
 /* When Fixed Element reaches footer, removed fixed positioning and position it where it stopped */
@@ -547,5 +552,61 @@ $('.close-modal-button').click(function(){
     $('.lens-type-modal-container').addClass('active');
 });
 
+/* 
+    5. Landing Page Scripts
+*/
+
+// Checks to see if we have the landing page slider on the page
+if($('.landing-page-slider').length) {
+
+    $('.landing-page-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        var currentSlide = $(slick.$slides[currentSlide]);
+        var nextSlide = $(slick.$slides[nextSlide]);
+        
+        // This make ssure the video starts from the beginning whenver it is the active slide
+
+        var videoSlide = $('.landing-page-slider video');
+        for(var i = 0; i < videoSlide.length; i++){
+            videoSlide[i].currentTime = 0;
+            videoSlide[i].pause();
+            videoSlide[i].play();
+        }
+        // This function is tied to the colours of the header and navigation. 
+        // If the next slide that it is about to transition to has the class light-text, or
+        // dark-text it will update the header text and logo colours accordingly 
+
+        if(nextSlide.hasClass('dark-text')){
+            $('.navigation-search-bar').removeClass('transparent-bg transparent-toggle');
+            $('.landing-page-slider-controls').removeClass('light');
+            $('.slick-dots').removeClass('light');
+            $('.cart-link').removeClass('colour-change');
+            $('.navigation-search-bar').removeClass('scroll-callback');
+        } else if(nextSlide.hasClass('light-text')){
+            if(!$('.navigation-search-bar').hasClass('scrolled')){
+                $('.navigation-search-bar').addClass('transparent-bg transparent-toggle');
+            } else {
+                $('.navigation-search-bar').addClass('scroll-callback');
+            }
+            $('.landing-page-slider-controls').addClass('light');
+            $('.slick-dots').addClass('light');
+            $('.cart-link').addClass('colour-change');
+        }
+    });
+
+    // Initialises the slider
+
+    $('.landing-page-slider').slick({
+        prevArrow: $('.previous-slide-link'),
+        nextArrow: $('.next-slide-link'),
+        dots: true,
+        autoplay: false,
+    });
+
+    // Auto Slide slider when video is finish
+    $('.slick-current video').on('ended',function(){
+        $slidenumber = $(".landing-page-slider .slick-current").data("slick-index"); // Get slide number
+        $(".landing-page-slider").slick('slickGoTo', $slidenumber + 1);
+    });
+}
 
 

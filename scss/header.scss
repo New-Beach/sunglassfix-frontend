@@ -437,7 +437,7 @@
 
 .navigation-search-bar {
 	padding: 1.25rem 2.5rem;
-	background-color: $white;
+	background-color: transparent;
 
 	.search-button {
 		background-color: $orange;
@@ -623,6 +623,7 @@
 
 .navigation-search-bar.scrolled {
 	border-bottom: 1px solid $light-grey;
+	background-color: $white;
 
 	.header-logo-container {
 		svg {

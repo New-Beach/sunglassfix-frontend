@@ -539,72 +539,82 @@
 			</div>
 
 		</header>
-		
-		<!-- Only necessary on pages with fixed elements as the next element after the header -->
-		<section class="header-spacer"></section>
 
-		<section class="landing-page-slider-section">
+		<section class="landing-page-slider-section no-top-padding">
 			<div class="flex-grid">
 				<div class="column-12">
-					<!-- This is the main slider element, it can contain slides with a number of variables including content type i.e. image / video, custom slide length for videos, and classes that determine the colour of the text to contrast the background colour -->
+					<!-- This is the main slider element, it can contain slides with a number of variables including content type i.e. image / video, custom slide length for videos, and classes that determine the colour of the text to contrast the background colour, and classes which determine a background colour based on the solid background colour of the video or image -->
 					<div class="landing-page-slider-container">
 						
 						<div class="landing-page-slider">
-							
+							<!-- An example of a video slides, note the additional classes -->
 							<div class="landing-page-slide video-content dark-text">
+								<div class="mobile-top-spacer slide-1-background"></div>
 								<div class="background-element background-video">
-									<video class="lens-installation-videos" autoplay muted list="nodownload nofullscreen" poster="assets/images/video-cover.jpg">
-										<source src="assets/videos/instruction-video.mp4" type="video/mp4">
+									<video class="lens-installation-videos" autoplay muted list="nodownload nofullscreen" poster="assets/images/slider-video-cover.jpg">
+										<source src="assets/videos/instruction-video-slide.mp4" type="video/mp4">
 									</video>
 								</div>
-								<div class="overlaying-content">
-									<div class="slide-title-container">
-										<h2 class="slide-title">G<span class="double-o">oo</span>d as new</h2>
-									</div>
-									<div class="slide-info-with-controls">
-										<div class="slide-info">
-											<p>Sunglass Fix is the only replacement lens company for all sunglasses. </p>
+								<div class="overlaying-content slide-1-background">
+									<div class="flex-grid">
+										<div class="column-8 lg-column-12">
+											<div class="slide-title-container">
+													<h2 class="slide-title">G<span class="accent lens-letter">oo</span>d as new</h2>
+											</div>
 										</div>
-										<div class="cta-wrapper">
-											<div class="rounded-button orange-button">
-												<a href="#">Search for your lenses</a>
+										<div class="column-4 lg-column-12">
+											<div class="slide-info-with-controls">
+												<div class="slide-info">
+													<h3><span class="accent">Custom cut lenses</span> to order for any sunglass style and brand.</h3>
+												</div>
+												<div class="cta-wrapper">
+													<div class="rounded-button orange-button activate-search-dialogue">
+														<a href="#">Search for your lenses</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-
+							
 							<div class="landing-page-slide image-content light-text">
-								<div class="background-element background-image">
-									<img src="assets/images/landing-page-slider-1.jpg" />
+								<div class="mobile-top-spacer slide-2-background"></div>
+								<div class="background-element background-image"
+								style="background-image: url(assets/images/landing-page-slider-1.jpg);">
 								</div>
-								<div class="overlaying-content">
-									<div class="slide-title-container vertical-text">
-										<h2 class="slide-title vertical">besp<span class="lens-letter">o</span>ke</h2>
-										<h2 class="slide-title vertical"><span class="lens-letter">o</span>ptics</h2>
-									</div>
-									<div class="slide-info-with-controls">
-										<div class="slide-info">
-											<p><span class="accent">Custom cut lenses</span> to order for any sunglass style and brand.</p>
+								<div class="overlaying-content slide-2-background">
+									<div class="flex-grid">
+										<div class="column-8 lg-column-12">
+											<div class="slide-title-container vertical-text">
+												<h2 class="slide-title vertical">besp<span class="accent lens-letter">o</span>ke </h2>
+												<h2 class="slide-title second-line vertical"><span class="accent lens-letter">o</span>ptics</h2>
+											</div>
 										</div>
-										<div class="cta-wrapper">
-											<div class="rounded-button orange-button">
-												<a href="#">Search for your lenses</a>
+										<div class="column-4 lg-column-12">
+											<div class="slide-info-with-controls">
+												<div class="slide-info">
+													<h3><span class="accent">Custom cut lenses</span> to order for any sunglass style and brand.</h3>
+												</div>
+												<div class="cta-wrapper">
+													<div class="rounded-button orange-button activate-search-dialogue">
+														<a href="#">Search for your lenses</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-
 						</div>
 						
 						<!-- This element controls the slider -->
 						<div class="landing-page-slider-controls">
 							<div class="previous-slide-link">
-								<img src="assets/images/previous-arrow.svg" class="button-svg" />
+								<img src="assets/images/slider-arrow-left.svg" class="button-svg" />
 							</div>
 							<div class="next-slide-link">
-								<img src="assets/images/next-arrow.svg" class="button-svg" />
+								<img src="assets/images/slider-arrow-right.svg" class="button-svg" />
 							</div>
 						</div>
 
@@ -708,7 +718,7 @@
 						<ul class="video-list">
 							<li>
 								<video class="switch-video" controls list="nodownload nofullscreen" poster="assets/images/video-cover.jpg">
-									<source src="assets/videos/instruction-video.mp4" type="video/mp4">
+									<source src="assets/videos/instruction-video-slide.mp4" type="video/mp4">
 								</video>
 							</li>
 							<li>
