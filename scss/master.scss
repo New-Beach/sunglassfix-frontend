@@ -211,6 +211,47 @@ strong, b {
 	}
 }
 
+.rounded-select-container {
+	position: relative;
+	.rounded-select {
+		display: block;
+		font-size: 1rem;
+		font-family: 'Sailec Regular', sans-serif;
+		color: $navy;
+		line-height: 2rem;
+		padding: 0.75rem 2rem;
+		outline: 0;
+		width: 100%;
+		max-width: 100%; 
+		box-sizing: border-box;
+		border: 1px solid $light-grey;
+		border-radius: 5rem;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		appearance: none;
+		background-color: #fff;
+		cursor: pointer;
+
+		&:hover, &:active {
+			border-color: $navy;
+		} 
+	}
+	.dropdown-arrow {
+		position: absolute;
+		right: 0.5rem;
+		top: 0.75rem;
+		padding: 0.5rem 1.5rem;
+		background: $white;
+
+		svg {
+			path {
+				stroke: $navy;
+			}
+		}
+	}	
+}
+
+
 /* Padding Classes */
 
 .pad-2 {
