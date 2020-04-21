@@ -204,6 +204,24 @@ strong, b {
 	}
 }
 
+.transparent-button {
+	border-color: $navy;
+	background-color: transparent;
+	transition: all 0.25s ease;
+	
+	a {
+		color: $navy;
+		transition: color 0.25s ease;
+	}
+}
+
+.transparent-button:hover {
+	background-color: $navy;
+	a {
+		color: $white;
+	}
+}
+
 @media screen and (max-width: $mobile-break){
 	.rounded-button {
 		width: 100%;

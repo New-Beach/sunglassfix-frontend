@@ -1,8 +1,5 @@
 @import 'variables.scss';
 
-video, img {
-	max-width: 100%;
-}
 /* Landing Page Slider */
 
 .no-top-padding {
@@ -342,6 +339,450 @@ video, img {
 			path {
 				fill: $white;
 			}
+		}
+	}
+}
+
+// Four column steps section
+
+.four-column-steps-section {
+	.section-header {
+		padding: 2.5rem;
+		text-align: center;
+
+		h2 {
+			padding-bottom: 0;
+		}
+	}
+
+	@media screen and (max-width: $tablet-break){
+		.section-header {
+			padding: 1.25rem;
+		}
+	}
+
+	.steps-container {
+		padding: 0 1.25rem;
+	}
+
+	@media screen and (max-width: $tablet-break){
+		.steps-container {
+			padding: 0 0.75rem;
+		}
+	}
+
+	.step-segment {
+		padding: 0 1.25rem 1.25rem 1.25rem;
+
+		.step-image {
+			display: flex;
+			flex-direction: column;
+			min-height: 13rem;
+			justify-content: center;
+		}
+
+		.step-title {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+
+			h2 {
+				color: $orange;
+				padding-left: 1.25rem;
+			}
+		}
+
+		.step-description {
+			a {
+				color: $orange;
+			}
+		}
+	}
+
+	@media screen and (max-width: $tablet-break){
+		.step-segment {
+			padding: 0 0.75rem 0 0.75rem;
+		}
+	}
+}
+
+/* Video Switcher Section */
+.video-switcher-section {
+	background-color: $off-white;
+
+	.video-switcher-grid {
+		align-items: center;
+	}
+
+	.lens-installation-description {
+		padding: 5rem;
+
+		a {
+			color: $orange;
+		}
+	}
+
+	.video-selector-container {
+		padding: 5rem;
+
+		.video-selector-element {
+			padding-bottom: 1.25rem;
+		}
+
+		.video-list {
+			li {
+				display: none;
+			}
+			li.selected-video {
+				display: block;
+			}
+			video {
+				max-width: 100%;
+				outline: 0;
+			}
+		}
+	}
+
+	@media screen and (max-width: $small-desktop-break){
+		.video-selector-container, .lens-installation-description {
+			padding: 2.5rem;
+		}
+	}
+
+	@media screen and (max-width: $tablet-break){
+		.video-selector-container, .lens-installation-description {
+			padding: 1.5rem;
+		}
+	}
+
+	@media screen and (max-width: $tablet-break){
+		.lens-installation-description {
+			padding-bottom: 0;
+		}
+
+		.video-selector-container {
+			padding-top: 0;
+		}
+	}
+}
+
+/* Background Video Element */
+
+.background-video-element {
+	position: relative;
+	min-height: 45rem;
+
+	.background-video-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+
+		video {
+			position: absolute;
+			min-height: 100%;
+			min-width: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		@media screen and (max-width: $tablet-break){
+			video {
+				min-height: auto;
+				height: 30rem;
+			}
+		}
+	}
+
+	.background-video-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,0.5);
+		height:100%;
+		width: 100%;
+	}
+
+	.background-video-content-grid {
+		min-height: 45rem;
+	}
+
+	@media screen and (max-width: $tablet-break){
+		.background-video-content-grid {
+			min-height: 30rem;
+		}
+	}
+
+	.background-video-content-container {
+		position: relative;
+		z-index: 100;
+		color: $white;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		h2 {
+			text-align: center;
+		}
+
+		.links-section {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			justify-content: center;
+
+			.rounded-button:first-of-type {
+				margin-right: 1rem;
+			}
+		}
+
+		@media screen and (max-width: $mobile-break){
+			.links-section { 
+				flex-direction: column;
+
+				.rounded-button:first-of-type {
+					margin-bottom: 1rem;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: $tablet-break){
+		.background-video-content-container {
+			padding: 0 1.5rem;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet-break){
+	.background-video-element {
+		min-height: 30rem;
+	}
+}
+
+/* Home Page Reviews Section */
+
+.reviews-summary-element {
+	.section-header {
+		padding: 2.5rem 0;
+		h2 {
+			text-align: center;
+		}
+	}
+
+	@media screen and (max-width: $tablet-break) {
+		.section-header {
+			padding: 1.25rem;
+		}
+	}
+
+	.reviews-wrapper {
+		padding: 0 1.25rem;
+
+		.review-summary, .review {
+			padding: 0 1.25rem;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+
+		.review-summary {
+			
+			h3 {
+				padding-top: 1rem;
+			}
+
+			.trustpilot-logo-container {
+				flex: 1 1 auto;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-end;
+			}
+		}
+
+		@media screen and (max-width: $small-desktop-break){
+			.review-summary {
+				padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+				margin: 0 -1.25rem 2.5rem -1.25rem;
+				text-align: center;
+				border-top: 1px solid $light-grey;
+				border-bottom: 1px solid $light-grey;
+
+				.trustpilot-logo-container {
+					align-items: center;
+				}
+			}
+		}
+
+		@media screen and (max-width: $tablet-break){
+			.review-summary {
+				margin: 0 0 2.5rem 0;
+			}
+		}
+
+		.review {
+			.review-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+
+				.title {
+					font-weight: bold;
+					padding-top: 1rem;
+				}
+
+				.time {
+					font-size: 0.875rem;
+					color: $slate;
+					padding-left: 0.5rem;
+				}
+			}
+
+			.review-footer {
+				flex: 1 1 auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+
+				.footer-details-wrapper {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: baseline;
+					flex-wrap: nowrap;
+
+					.name {
+						font-size: 0.875rem;
+						line-height: 1rem;
+					}
+
+					.verified {
+						color: $slate;
+						padding-left: 0.5rem;
+						display: inline-flex;
+						flex-wrap: nowrap;
+
+						span {
+							font-size: 0.875rem;
+							padding-right: 0.25rem;
+							line-height: 1rem;
+						}
+
+						img {
+							height: 0.875rem;
+							width: auto;
+						}
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: $tablet-break) {
+			.review {
+				padding: 1.25rem;
+			}
+		}
+	}
+	@media screen and (max-width: $tablet-break) {
+		.reviews-wrapper {
+			padding: 0;
+		}
+	}
+
+	.section-footer {
+		text-align: center;
+		padding: 2.5rem;
+	}
+}
+
+/* Blog Section */
+
+.blog-section {
+	background-color: $off-white;
+
+	.section-header {
+		padding: 2.5rem;
+		text-align: center;
+
+		h2 {
+			padding-bottom: 0;
+		}
+	}
+
+	.section-footer {
+		padding: 2.5rem;
+		text-align: center;
+	}
+
+	@media screen and (max-width: $small-desktop-break) {
+		.section-footer {
+			padding-top: 0;
+		}
+	}
+
+	.blog-stories-wrapper {
+		padding: 0 1.25rem;
+	}
+
+	@media screen and (max-width: $tablet-break) {
+		.blog-stories-wrapper {
+			padding: 0 0.75rem;
+		}
+	}
+
+	.blog-story {
+		padding: 0 1.25rem;
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+		height: 100%;
+		
+		.blog-featured-image {
+			img {
+				width: 100%;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+
+		.blog-body {
+			background-color: $white;
+			padding: 1.5rem;
+			margin-top: -0.25rem;
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			
+
+			.blog-date {
+				font-size: 0.875rem;
+				line-height: 1rem;
+				color: $slate;
+			}
+		}
+	}
+
+	@media screen and (max-width: $small-desktop-break) {
+		.blog-story {
+			padding-bottom: 2.5rem;
+		}
+	}
+
+	@media screen and (max-width: $tablet-break) {
+		.blog-story {
+			padding: 0 0.75rem 1.5rem 0.75rem;
 		}
 	}
 }

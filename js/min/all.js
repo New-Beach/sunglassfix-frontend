@@ -609,4 +609,13 @@ if($('.landing-page-slider').length) {
     });
 }
 
+// Video Select Switcher
+
+if($('.video-select').length) {
+    $('.video-select').change(function(){
+        $('.video-list li').removeClass('selected-video');
+        var selected_value = $('.video-select').val();
+        $('.video-list').find(("[data-value='" + selected_value + "']")).addClass('selected-video');
+    });
+}
 
