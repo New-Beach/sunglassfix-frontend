@@ -168,6 +168,11 @@
 				@media screen and (max-width: $mobile-break){
 					.overlaying-content {
 						min-height: 15rem;
+
+						.slide-title-container, .slide-info-with-controls {
+							padding: 0 1.5rem;
+						}
+
 					}
 				}
 
@@ -334,6 +339,24 @@
 		}
 	}
 
+	@media screen and (max-width: $tablet-break){
+		.landing-page-slider-controls {
+			top: 35%;
+			right: 0;
+			left: 0;
+
+			.previous-slide-link {
+				position: absolute;
+				left: 1.5rem;
+			}
+
+			.next-slide-link {
+				position: absolute;
+				right: 1.5rem;
+			}
+		}
+	}
+
 	.landing-page-slider-controls.light {
 		.previous-slide-link svg, .next-slide-link svg {
 			path {
@@ -494,6 +517,13 @@
 				height: 30rem;
 			}
 		}
+
+		@media screen and (max-width: $mobile-break){
+			video {
+				min-height: auto;
+				height: 35rem;
+			}
+		}
 	}
 
 	.background-video-overlay {
@@ -512,6 +542,12 @@
 	@media screen and (max-width: $tablet-break){
 		.background-video-content-grid {
 			min-height: 30rem;
+		}
+	}
+
+	@media screen and (max-width: $mobile-break){
+		.background-video-content-grid {
+			min-height: 35rem;
 		}
 	}
 
@@ -561,6 +597,12 @@
 @media screen and (max-width: $tablet-break){
 	.background-video-element {
 		min-height: 30rem;
+	}
+}
+
+@media screen and (max-width: $mobile-break){
+	.background-video-element {
+		min-height: 35rem;
 	}
 }
 
