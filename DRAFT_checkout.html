@@ -542,6 +542,394 @@
 		
 		<!-- Only necessary on pages with fixed elements as the next element after the header -->
 		<section class="header-spacer"></section>
+		
+		<!-- This only appears on smaller devices when the sidebar order summary needs to be hidden -->
+		<section class="mobile-order-summary">
+			
+			<div class="mobile-order-summary-header">
+				<div class="view-order-toggle">
+					<span>Show Order Summary</span>
+					<img class="expand-icon" width="22px" src="assets/images/show-order-flipped.svg">
+				</div>
+				<div class="mobile-total">
+					<span>$71.90</span>
+				</div>
+			</div>
+			
+			<div class="collapse-order-summary">
+				<section class="order-summary pad-2">
+					<div class="order-summary-header">
+						<h3>Order Summary</h3>
+					</div>
+					<ul class="order-summary-items">
+						<li>
+							<div class="order-item">
+								<span class="item-name">
+									Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm
+								</span>
+								<span class="item-price">
+									$35.95
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="order-item">
+								<span class="item-name">
+									Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm
+								</span>
+								<span class="item-price">
+									$35.95
+								</span>
+							</div>
+						</li>
+					</ul>
+					<div class="order-total pad-t-1">
+						<span>Total</span>
+						<span class="total-price">$71.90</span>
+					</div>
+				</section>
+			</div>
+
+		</section>
+
+		<div class="flex-grid">
+			
+			<div class="column-8 md-column-12">
+
+				<div class="checkout-form-container">
+				
+					<section class="checkout-header pad-h-2">
+						<h1>Checkout</h1>
+						<div class="checkout-progress-container">
+							<ul class="checkout-progress pad-b-2">
+								
+								<li class="active">
+									<div class="progress-number">
+										<span>1</span>
+									</div>
+									<div class="progess-step">
+										<span>Your Details</span>
+									</div>
+								</li>
+
+								<li>
+									<div class="progress-number">
+										<span>2</span>
+									</div>
+									<div class="progess-step">
+										<span>Shipping</span>
+									</div>
+								</li>
+
+								<li>
+									<div class="progress-number">
+										<span>3</span>
+									</div>
+									<div class="progess-step">
+										<span>Payment</span>
+									</div>
+								</li>
+
+								<li>
+									<div class="progress-number">
+										<span>4</span>
+									</div>
+									<div class="progess-step">
+										<span>Order Complete</span>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+					</section>
+					
+					<section class="login-prompt pad-h-2 pad-v-1">
+						<span>Have a Sunglass Fix account? <a href="">Log in</a></span>
+					</section>
+					
+					<!-- This area is should use ajax to take each input from the forms, step through each of the steps and collect all fo the details to process the order -->
+					<div class="checkout-process-interactive-area pad-v-2">
+						
+						<!-- This is the first step in the checkout, once the fields have been filled in successfully, the user can move on to the next step -->
+
+						<section class="billing-shipping-details">
+
+							<div class="billing-details pad-h-2 pad-b-2">
+								<h3>Billing Details</h3>
+								<form class="billing-details-form form-styles">
+									
+									<div class="input-group half-width left">
+										<label for="firstname">
+											First Name
+											<span class="required">*</span>
+										</label>
+										<input type="text" name="firstname" />
+									</div>
+
+									<div class="input-group half-width right">
+										<label for="lastname">
+											Last Name
+											<span class="required">*</span>
+										</label>
+										<input type="text" name="lastname" />
+									</div>
+
+									<div class="input-group half-width left">
+										<label for="email">
+											Email
+											<span class="required">*</span>
+										</label>
+										<input type="text" name="email" />
+									</div>
+
+									<div class="input-group half-width right">
+										<label for="telephone">
+											Telephone
+											<span class="required">*</span>
+										</label>
+										<input type="text" name="telephone" />
+									</div>
+
+									<div class="input-group full-width">
+										<label for="companyname">
+											Company
+										</label>
+										<input type="text" name="companyname" />
+									</div>
+
+									<div class="input-group full-width">
+										<label for="address1">
+											Address Line 1
+											<span class="required">*</span>
+										</label>
+										<input type="text" name="address1" />
+									</div>
+
+									<div class="input-group full-width">
+										<label for="address2">
+											Address Line 2
+										</label>
+										<input type="text" name="address2" />
+									</div>
+
+									<div class="input-group half-width left">
+										<label for="city">
+											City
+											<span class="required">*</span>
+										</label>
+										<input type="text" name="city" />
+									</div>
+
+									<div class="input-group half-width right">
+										<label for="postcode">
+											Post Code
+											<span class="required">*</span>
+										</label>
+										<input type="text" name="postcode" />
+									</div>
+
+									<div class="input-group half-width left">
+										<label for="country">
+											Country
+											<span class="required">*</span>
+										</label>
+										<div class="rounded-select-container">
+											<select class="rounded-select" name="country">
+												<option>Australia</option>
+												<option>Australia</option>
+												<option>Australia</option>
+												<option>Australia</option>
+												<option>Australia</option>
+											</select>
+											<div class="dropdown-arrow">
+												<img src="assets/images/arrow-down.svg" class="button-svg" />
+											</div>
+										</div>
+									</div>
+
+									<div class="input-group half-width right">
+										<label for="statezone">
+											State / Zone
+											<span class="required">*</span>
+										</label>
+										<div class="rounded-select-container">
+											<select class="rounded-select" name="country">
+												<option>Australia</option>
+												<option>Australia</option>
+												<option>Australia</option>
+												<option>Australia</option>
+												<option>Australia</option>
+											</select>
+											<div class="dropdown-arrow">
+												<img src="assets/images/arrow-down.svg" class="button-svg" />
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+
+							<div class="shipping-address-check pad-h-2 pad-v-1">
+								<div class="input-group"> 
+									<input type="checkbox" name="sameshipping" />
+									<label for="sameshipping">My shipping address is the same as my billing address</label>
+								</div>
+							</div>
+
+							<div class="shipping-address pad-h-2 pad-t-2">
+								<h3>Shipping Details</h3>
+								<form class="shipping-details-form form-styles">
+
+									<div class="input-group half-width left">
+										<label for="ship_firstname">
+											First Name
+											<span class="required">*</span>
+										</label>
+										<input type="text" name="ship_firstname" />
+									</div>
+
+									<div class="input-group half-width right">
+										<label for="ship_lastname">
+											Last Name
+											<span class="required">*</span>
+										</label>
+										<input type="text" name="ship_lastname" />
+									</div>
+									
+									<div class="input-group full-width">
+										<label for="ship_companyname">
+											Company
+										</label>
+										<input type="text" name="ship_companyname" />
+									</div>
+
+									<div class="input-group full-width">
+										<label for="ship_address1">
+											Address Line 1
+											<span class="required">*</span>
+										</label>
+										<input type="text" name="ship_address1" />
+									</div>
+
+									<div class="input-group full-width">
+										<label for="ship_address2">
+											Address Line 2
+										</label>
+										<input type="text" name="ship_address2" />
+									</div>
+
+									<div class="input-group half-width left">
+										<label for="ship_city">
+											City
+											<span class="required">*</span>
+										</label>
+										<input type="text" name="ship_city" />
+									</div>
+
+									<div class="input-group half-width right">
+										<label for="ship_postcode">
+											Post Code
+											<span class="required">*</span>
+										</label>
+										<input type="text" name="ship_postcode" />
+									</div>
+
+									<div class="input-group half-width left">
+										<label for="ship_country">
+											Country
+											<span class="required">*</span>
+										</label>
+										<div class="rounded-select-container">
+											<select class="rounded-select" name="country">
+												<option>Australia</option>
+												<option>Australia</option>
+												<option>Australia</option>
+												<option>Australia</option>
+												<option>Australia</option>
+											</select>
+											<div class="dropdown-arrow">
+												<img src="assets/images/arrow-down.svg" class="button-svg" />
+											</div>
+										</div>
+									</div>
+
+									<div class="input-group half-width right">
+										<label for="ship_statezone">
+											State / Zone
+											<span class="required">*</span>
+										</label>
+										<div class="rounded-select-container">
+											<select class="rounded-select" name="country">
+												<option>Australia</option>
+												<option>Australia</option>
+												<option>Australia</option>
+												<option>Australia</option>
+												<option>Australia</option>
+											</select>
+											<div class="dropdown-arrow">
+												<img src="assets/images/arrow-down.svg" class="button-svg" />
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+
+						</section>
+
+					</div> <!-- end checkout-process-interactive-area -->
+
+					<section class="proceed-button-section pad-2">
+						<div class="proceed-container">
+							<div class="rounded-button blue-button">
+								<a href="">Proceed to next step</a>
+							</div>
+						</div>
+					</section>
+
+				</div> <!-- end checkout-form-container -->
+
+			</div> <!-- end column-8 -->
+
+			<div class="column-4 mobile-hide-element">
+				<section class="order-summary pad-2">
+					<div class="order-summary-header">
+						<h3>Order Summary</h3>
+					</div>
+					<ul class="order-summary-items">
+						<li>
+							<div class="order-item">
+								<span class="item-name">
+									Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm
+								</span>
+								<span class="item-price">
+									$35.95
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="order-item">
+								<span class="item-name">
+									Sunglass Fix Replacement Lenses for Quiksilver Brigade | 56mm
+								</span>
+								<span class="item-price">
+									$35.95
+								</span>
+							</div>
+						</li>
+					</ul>
+					<div class="order-total pad-t-1">
+						<span>Total</span>
+						<span class="total-price">$71.90</span>
+					</div>
+				</section>
+				<section class="apply-coupon-section pad-2">
+					<p>Apply Coupon Code</p>
+					<div class="coupon-input">
+						<input name="coupon" type="text" placeholder="Enter coupon code" />
+						<input type="submit" value="Apply" />
+					</div>
+				</section>
+			</div>
+		</div>
 
 	</div> <!-- end main wrapper -->
 

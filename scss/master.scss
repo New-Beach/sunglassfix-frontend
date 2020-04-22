@@ -204,6 +204,22 @@ strong, b {
 	}
 }
 
+.blue-button {
+	border-color: $blue;
+	background-color: $blue;
+	transition: all 0.25s ease;
+	
+	a {
+		color: $white;
+		transition: color 0.25s ease;
+	}
+}
+
+.blue-button:hover {
+	background-color: $navy;
+	border-color: $navy;
+}
+
 .transparent-button {
 	border-color: $navy;
 	background-color: transparent;

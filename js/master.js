@@ -619,3 +619,19 @@ if($('.video-select').length) {
     });
 }
 
+/* 
+    5. Cart & Checkout Scripts
+*/
+
+if($('.view-order-toggle').length){
+    $('.view-order-toggle').click(function(){
+        $('.collapse-order-summary').toggleClass('active');
+        if($('.collapse-order-summary').hasClass('active')){
+            $('.view-order-toggle span').html('Hide Order Summary');
+        } else {
+            $('.view-order-toggle span').html('Show Order Summary');
+        }
+        
+    });
+}
+
