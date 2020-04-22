@@ -648,7 +648,7 @@
 					</section>
 					
 					<!-- This area is should use ajax to take each input from the forms, step through each of the steps and collect all fo the details to process the order -->
-					<div class="checkout-process-interactive-area pad-v-2">
+					<div class="checkout-process-interactive-area pad-t-2">
 						
 						<!-- This is the first step in the checkout, once the fields have been filled in successfully, the user can move on to the next step -->
 
@@ -770,12 +770,15 @@
 
 							<div class="shipping-address-check pad-h-2 pad-v-1">
 								<div class="input-group"> 
-									<input type="checkbox" name="sameshipping" />
-									<label for="sameshipping">My shipping address is the same as my billing address</label>
+									
+									<label for="sameshipping">
+									<input type="checkbox" name="sameshipping" class="sameshipping-input" />
+									<span>My shipping address is the same as my billing address</span>
+									</label>
 								</div>
 							</div>
 
-							<div class="shipping-address pad-h-2 pad-t-2">
+							<div class="shipping-address pad-2">
 								<h3>Shipping Details</h3>
 								<form class="shipping-details-form form-styles">
 

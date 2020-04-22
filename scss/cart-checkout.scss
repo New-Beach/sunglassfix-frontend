@@ -313,8 +313,12 @@
 	border-bottom: 1px solid $light-grey;
 }
 
-.proceed-button-section {
-	border-top: 1px solid $light-grey;
+.shipping-address {
+	border-bottom: 1px solid $light-grey;
+}
+
+.shipping-address.hidden {
+	display: none;
 }
 
 /* Form field styles */

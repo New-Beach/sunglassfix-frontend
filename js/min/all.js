@@ -635,3 +635,9 @@ if($('.view-order-toggle').length){
     });
 }
 
+if($('.sameshipping-input').length){
+    $('.sameshipping-input').on('change', function(){
+        $('.shipping-address').toggleClass('hidden');
+    });
+}
+
