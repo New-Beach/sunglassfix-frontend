@@ -22,7 +22,7 @@
 		<header class="site-header">
 			<div class="top-header-bar">
 				<div class="flex-grid">
-					<div class="column-4 lg-column-hide"></div>	
+					<div class="column-4 lg-column-hide"></div>
 					<div class="column-4 lg-column-6">
 						<div class="free-shipping">
 							<div class="small-text">
@@ -540,481 +540,140 @@
 
 		</header>
 
-		<section class="landing-page-slider-section no-top-padding">
-			<div class="flex-grid">
-				<div class="column-12">
-					<!-- This is the main slider element, it can contain slides with a number of variables including content type i.e. image / video, custom slide length for videos, and classes that determine the colour of the text to contrast the background colour, and classes which determine a background colour based on the solid background colour of the video or image -->
-					<div class="landing-page-slider-container">
-						
-						<div class="landing-page-slider">
-							<!-- An example of a video slides, note the additional classes. The dark-text class will make sure the contrast between the text and image will stand ou on light images, and the light-text class will make sure that the contrast will work on dark images. -->
-							<div class="landing-page-slide video-content dark-text">
-								<!-- This padding only appears on mobile and is coloured the same as the background colour of the slide image or video -->
-								<div class="mobile-top-spacer slide-1-background"></div>
-								<div class="background-element background-video">
-									<video class="lens-installation-videos" autoplay muted list="nodownload nofullscreen" poster="assets/images/slider-video-cover.jpg">
-										<source src="assets/videos/instruction-video-slide.mp4" type="video/mp4">
-									</video>
-								</div>
-								<!-- On desktop this area overlays the image or the video, but from small desktop screens and down, it becomes a static element with a background colour the same as the video or image and sits underneath the video / image -->
-								<div class="overlaying-content slide-1-background">
-									<div class="flex-grid">
-										<div class="column-8 lg-column-12">
-											<div class="slide-title-container">
-												<!-- For slide titles that have two consecutive O's we csn use the custom font to replace those O's with the circles. Not much needs to change for these titles on smaller screens-->
-												<h2 class="slide-title">G<span class="accent lens-letter">oo</span>d as new</h2>
-											</div>
-										</div>
-										<div class="column-4 lg-column-12">
-											<div class="slide-info-with-controls">
-												<div class="slide-info">
-													<h3><span class="accent">Custom cut lenses</span> to order for any sunglass style and brand.</h3>
-												</div>
-												<div class="cta-wrapper">
-													<!-- This button launches the search bar dialogue -->
-													<div class="rounded-button orange-button activate-search-dialogue">
-														<a href="#">Search for your lenses</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Here is a second slide and an example of the image slide with light text -->
-							<div class="landing-page-slide image-content light-text">
-								<div class="mobile-top-spacer slide-2-background"></div>
-								<div class="background-element background-image"
-								style="background-image: url(assets/images/landing-page-slider-1.jpg);">
-								</div>
-								<div class="overlaying-content slide-2-background">
-									<div class="flex-grid">
-										<div class="column-8 lg-column-12">
-											<!-- The vertical text element will only work properly on large desktops as the element takes up a lot of room. On smaller screens we change the text back to the regular left to right format, and remove the special characters which align the two O's. -->
-											<div class="slide-title-container vertical-text">
-												<h2 class="slide-title vertical">besp<span class="accent lens-letter">o</span>ke </h2>
-												<h2 class="slide-title second-line vertical"><span class="accent lens-letter">o</span>ptics</h2>
-											</div>
-										</div>
-										<div class="column-4 lg-column-12">
-											<div class="slide-info-with-controls">
-												<div class="slide-info">
-													<h3><span class="accent">Custom cut lenses</span> to order for any sunglass style and brand.</h3>
-												</div>
-												<div class="cta-wrapper">
-													<div class="rounded-button orange-button activate-search-dialogue">
-														<a href="#">Search for your lenses</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<!-- This element controls the slider -->
-						<div class="landing-page-slider-controls">
-							<div class="previous-slide-link">
-								<img src="assets/images/slider-arrow-left.svg" class="button-svg" />
-							</div>
-							<div class="next-slide-link">
-								<img src="assets/images/slider-arrow-right.svg" class="button-svg" />
-							</div>
-						</div>
+		<!-- This is the main image and heading section. -->
+		<section class="featured-page-header light-text no-top-padding background-color">
+			
+			<div class="background-image" style="background-image: url(assets/images/template-banner.jpg);"></div>
 
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<!-- This is a reusable section for any 4 column element that has images, titles and descriptions for each column -->
-		<section class="four-column-steps-section">
-			<div class="flex-grid">
-				<div class="column-12">
-					<div class="section-header">
-						<h2>How to upgrade your lenses</h2>
-					</div>
-				</div>
-			</div>
-			<div class="steps-container">
+			<div class="background-image-overlay"></div>
+
+			<div class="simple-text-area">
 				<div class="flex-grid">
-					<div class="column-3 md-column-6 sm-column-12">
-						<div class="step-segment">
-							<div class="step-image">
-								<img src="assets/images/upgrade-step-1.svg" />
-							</div>
-							<div class="step-title">
-								<h4>Search & Identify</h4>
-								<h2 class="step-number">01</h2>
-							</div>
-							<div class="step-description">
-								<p><a href="#">Find your model number</a>, usually written inside one of the arms and search our database. We’ve got over 130,000 models. Chances are we’ve got yours.</p>
-							</div>
-						</div>
-					</div>
-					<div class="column-3 md-column-6 sm-column-12">
-						<div class="step-segment">
-							<div class="step-image">
-								<img src="assets/images/upgrade-step-2.svg" />
-							</div>
-							<div class="step-title">
-								<h4>Choose</h4>
-								<h2 class="step-number">02</h2>
-							</div>
-							<div class="step-description">
-								<p>Choose your lenses from our extensive range of <a href="#">high quality, superlative optics.</a> Polarised and regular.</p>
-							</div>
-						</div>
-					</div>
-					<div class="column-3 md-column-6 sm-column-12">
-						<div class="step-segment">
-							<div class="step-image">
-								<img src="assets/images/upgrade-step-3.svg" />
-							</div>
-							<div class="step-title">
-								<h4>Delivery</h4>
-								<h2 class="step-number">03</h2>
-							</div>
-							<div class="step-description">
-								<p>Our lenses are <a href="#">shipped worldwide</a>, free of charge. We’ll keep you up to date on the status of your delivery.</p>
-							</div>
-						</div>
-					</div>
-					<div class="column-3 md-column-6 sm-column-12">
-						<div class="step-segment">
-							<div class="step-image">
-								<img src="assets/images/upgrade-step-4.svg" />
-							</div>
-							<div class="step-title">
-								<h4>Installation</h4>
-								<h2 class="step-number">04</h2>
-							</div>
-							<div class="step-description">
-								<p>Intall your lenses and enjoy. It’s really easy to do yourself. And we’ve got <a href="#">instructional videos</a> to help.</p>
-							</div>
+					<div class="column-12">
+						<div class="content-container pad-t-2">
+							<h2>About our lenses</h2>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		
-		<!-- This is an interactive element where users can select the video type that best applies to thier lenses and watch the relevant instruction video -->
-		<section class="video-switcher-section">
-			<div class="flex-grid video-switcher-grid">
-				<div class="column-6 md-column-12">
-					<div class="lens-installation-description">
-						<h2>How to Install your new lenses</h2>
-						<p>As a general rule, it is easier to put new lenses in than to take your old ones out. So, one of the quickest ways to determine if you’ll be able to replace the lenses yourself is to try removing them.</p>
 
-						<p>Watch the videos and give it a go. If it seems too tricky or you would just rather have us install them, order <a href="">Custom Cut and Installed Sunglass Replacement Lenses</a> and we'll do it for you.</p>
+		<section class="generic-text-section">
+			<div class="flex-grid">
+				<div class="column-2 md-column-0"></div>
+				<div class="column-8 md-column-12">
+					<div class="content-container pad-2">
+						<h1>Every Detail in High Definition. Superlative optics engineered for Clarity.</h1>
+						<p>You didn’t just buy your sunglasses because they look great. You bought them because the world looked great through them. We want your world to always look that good; if not better.</p>
+						<p>At The Sunglass Fix we believe that clarity is king. That’s why we won’t compromise the optical excellence of our lenses and only employ the most optically precise materials, coatings and films.</p>
 					</div>
 				</div>
-				<div class="column-6 md-column-12">
-					<div class="video-selector-container">
-						<div class="video-selector-element">
-							<div class="rounded-select-container">
-								<select class="video-select rounded-select">
-									<option value="metal" selected>Metal Frames with Screws</option>
-									<option value="metal_clip">Metal Clip-In Frames</option>
-									<option value="plastic_easy">Easy Plastic Frames</option>
-									<option value="plastic_hard">Hard Plastic Frames</option>
-									<option value="plastic_clip">Clip-In Plastic Frames</option>
-								</select>
-								<div class="dropdown-arrow">
-									<img src="assets/images/arrow-down.svg" class="button-svg" />
-								</div>
-							</div>
-						</div>
-						<div class="video-list-container">
-							<ul class="video-list">
-								<li data-value="metal" class="selected-video">
-									<video class="switch-video" controls list="nodownload nofullscreen" poster="assets/images/cover-metal-frame.jpg">
-										<source src="assets/videos/metal_frame.mp4" type="video/mp4">
-									</video>
-								</li>
-								<li data-value="metal_clip">
-									<video class="switch-video" controls list="nodownload nofullscreen" poster="assets/images/cover_clipin_metal.jpg">
-										<source src="assets/videos/clipin_metal.mp4" type="video/mp4">
-									</video>
-								</li>
-								<li data-value="plastic_easy">
-									<video class="switch-video" controls list="nodownload nofullscreen" poster="assets/images/cover_easy_plastic.jpg">
-										<source src="assets/videos/easy_plastic.mp4" type="video/mp4">
-									</video>
-								</li>
-								<li data-value="plastic_hard">
-									<video class="switch-video" controls list="nodownload nofullscreen" poster="assets/images/cover_hard_plastic.jpg">
-										<source src="assets/videos/hard_plastic.mp4" type="video/mp4">
-									</video>
-								</li>
-								<li data-value="plastic_clip">
-									<video class="switch-video" controls list="nodownload nofullscreen" poster="assets/images/cover_clipin_plastic.jpg">
-										<source src="assets/videos/clipin_plastic.mp4" type="video/mp4">
-									</video>
-								</li>
-							</ul>
-						</div>
+				<div class="column-2 md-column-0"></div>
+			</div>
+		</section>
+
+		<section class="generic-four-column-section">
+			<div class="flex-grid column-padding">
+				<div class="column-3 lg-column-6 md-column-12">
+					<div class="four-column-content-container content-container pad-h-1">
+						<img src="assets/images/four-column-image-a.jpg" />
+						<h3>Clarity</h3>
+						<p>Unlike most, we don’t just use regular polycarbonate for our Ultimate lenses. We use specially engineered optical Polyamide for a state of the art lens that combines the strength of plastic with the clarity of glass.</p>
+					</div>
+				</div>
+				<div class="column-3 lg-column-6 md-column-12">
+					<div class="four-column-content-container content-container pad-h-1">
+						<img src="assets/images/four-column-image-b.jpg" />
+						<h3>100% UV Blockout</h3>
+						<p>All our lenses come with guaranteed 100%UV block-out as standard. They are designed to withstand the rigours of the harsh Australian sun and will happily protect your eyes anywhere on our wonderful planet.</p>
+					</div>
+				</div>
+				<div class="column-3 lg-column-6 md-column-12">
+					<div class="four-column-content-container content-container pad-h-1">
+						<img src="assets/images/four-column-image-c.jpg" />
+						<h3>Polarisation Film</h3>
+						<p>All our lenses come with guaranteed 100%UV block-out as standard. They are designed to withstand the rigours of the harsh Australian sun and will happily protect your eyes anywhere on our wonderful planet.</p>
+					</div>
+				</div>
+				<div class="column-3 lg-column-6 md-column-12">
+					<div class="four-column-content-container content-container pad-h-1">
+						<img src="assets/images/four-column-image-d.jpg" />
+						<h3>Safety</h3>
+						<p>It’s not because we have to comply with American, Australian and European safety standards; it’s because your eyesight is as important to us as it is to you. Any tougher and our lenses would only be available standard issue in green.</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- This section has a rolling background video with some overlaying text, in this instance it is relevant to the lens quality section, but can be reused for other purposes -->
-
-		<section class="background-video-element">
-			
-			<div class="background-video-container">
-				<video class="switch-video" list="nodownload nofullscreen" poster="assets/images/cover-quality-lens.jpg" autoplay muted loop>
-					<source src="assets/videos/lens-quality-short.mp4" type="video/mp4">
-				</video>
-			</div>
-
-			<div class="background-video-overlay"></div>
-
-			<div class="flex-grid background-video-content-grid">
-				<div class="column-3 md-column-0"></div>
-				<div class="column-6 md-column-12">
-					<div class="background-video-content-container">
-						<h2>About our quality lenses</h2>
-						<p>We realise how important the lenses in the sunglasses you purchased are to you and to the original manufacturer. That’s why, at The Sunglass Fix, we set out to ensure that our lenses are at least as good, if not better than your original lenses.</p>
-						<p>All our lenses and coatings are simply the best in class. But don’t just take our word for it. You’ll find the same materials employed in the premium lenses of many industry icons.</p>
-						<div class="links-section">
-							<div class="rounded-button">
-								<a href="">Watch the film</a>
-							</div>
-							<div class="rounded-button">
-								<a href="">Learn more</a>
-							</div>
+		<section class="generic-video-section dark-section">
+			<div class="flex-grid">
+				<div class="column-2 md-column-0"></div>
+				<div class="column-8 md-column-12">
+					<div class="content-container pad-2">
+						
+						<h2>Precision Lens Engineering</h2>
+						<div class="video-content-container">
+							<video class="switch-video" controls list="nodownload nofullscreen" poster="assets/images/cover-quality-lens.jpg">
+								<source src="assets/videos/lens-quality-full.mp4" type="video/mp4">
+							</video>
 						</div>
+						
 					</div>
 				</div>
-				<div class="column-3 md-column-0"></div>
+				<div class="column-2 md-column-0"></div>
 			</div>
 		</section>
 
-		<!-- This is a generic reviews section which can be reused -->
-
-		<section class="reviews-summary-element">
-			
+		<section class="generic-text-section">
 			<div class="flex-grid">
-				<div class="column-3 md-column-0"></div>
-				<div class="column-6 md-column-12">
-					<div class="section-header">
-						<h2>What our customers say about us</h2>
-						<p>We’ve got more happy customers than any other replacement lens company. Maybe that’s because we’re the original; we like to think it’s because we’re the best. We always put you first. And we’ve always delivered industry leading precision optics.</p>
+				<div class="column-2 md-column-0"></div>
+				<div class="column-8 md-column-12">
+					<div class="content-container pad-2">
+						<h2>Our Replacement Lens Range</h2>
+						<p>SFx Ultimate Polarised Lenses - One of the strongest, lightweight and durable lenses made. These lenses integrate a Japanese polarisation film with 99.9% efficacy rating making it one of the best glare fighters around. This may be the best lens you've ever owned.</p>
+
+						<p>SFx Ultimate Regular Lenses - Safe, durable, lightweight and ready for action. Lenses are coated with a protective layer that resist scratching, repels water and sweat. Crystal clear protection when only the best can do.</p>
+
+						<p>All Ultimate Lenses are made from a unique flexible polymer that has unbelievable optical clarity. In fact, labortory testing ranks our lenses up with optical glass but our lenses are 1/3 the weight, don't break, are safer and easier to install. While some polycarbonate lenses claim they've got great clarity, you'll never go back to a polycarbonate lens once you tried ours.</p>
+
+						<p>SFx Polycarbonate Polarised - A strong polycarbonate lens with hydrophobic external coating that makes cleaning a breeze. The lenses integrate a Japanese polarisation film with 99.9% efficacy. A strong seller and original at The Sunglass Fix.</p>
+
+						<p>SFx Regular Polycarbonate Lenses - Our polycarbonate lenses perform great. Polycarbonate lenses set the standard for safety because of their strength. While you give up a bit in optical clarity, they are still a great replacement lens option.</p>
+
+						<p>** Please note, we do NOT sell Glass lenses. We made this choice as we feel there are better technolgies available today such as our Ultimate lens line. Our Utlimate lenses are safer, about 1/3 the weight, much easier to install on your own, don't break, and still provide similar optical clarity and durabilty you'd expect from a glass lens.</p>
 					</div>
 				</div>
-				<div class="column-3 md-column-0"></div>
-			</div>
-
-			<div class="reviews-wrapper">
-				<div class="flex-grid">
-					
-					<div class="column-3 lg-column-12">
-						<div class="review-summary">
-							<div class="star-rating">
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star-half.svg" />
-							</div>
-							<h3>Excellent</h3>
-							<p>Based on <a href="">944 Reviews</a></p>
-							<div class="trustpilot-logo-container">
-								<img src="assets/images/trustpilot-logo.svg" />
-							</div>
-						</div>
-					</div>
-
-					<div class="column-3 lg-column-4 md-column-12">
-						<div class="review">
-							<div class="star-rating">
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-							</div>
-							<div class="review-body">
-								<div class="review-header">
-									<p class="title">Great Lenses</p>
-									<span class="time">41 minutes ago</span>
-								</div>
-								<div class="review-content">
-									<p>Great lenses, fit perfectly and easy to install. I’ve gotten a few pairs of lenses from sunglass fix and have been happy with all of them.</p>
-								</div>
-							</div>
-							<div class="review-footer">
-								<div class="footer-details-wrapper">
-									<span class="name">Matthew Hand</span>
-									<div class="verified">
-										<span>Verified Order</span>
-										<img src="assets/images/verified.svg" />
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="column-3 lg-column-4 md-column-12">
-						<div class="review">
-							<div class="star-rating">
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-							</div>
-							<div class="review-body">
-								<div class="review-header">
-									<p class="title">Great experience</p>
-									<span class="time">9 Hours Ago</span>
-								</div>
-								<div class="review-content">
-									<p>Lenses came quickly (~2.5wks to US). They looked great and fit perfectly in my Ralph Lauren frames. The quality is fantastic. Definitely recommend!</p>
-								</div>
-							</div>
-							<div class="review-footer">
-								<div class="footer-details-wrapper">
-									<span class="name">Jess H</span>
-									<div class="verified">
-										<span>Verified Order</span>
-										<img src="assets/images/verified.svg" />
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="column-3 lg-column-4 md-column-12">
-						<div class="review">
-							<div class="star-rating">
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-								<img src="assets/images/trustpilot-star.svg" />
-							</div>
-							<div class="review-body">
-								<div class="review-header">
-									<p class="title">Customer Service</p>
-									<span class="time">2 days ago</span>
-								</div>
-								<div class="review-content">
-									<p>They helped me out when I ordered the wrong size lenses. Thanks</p>
-								</div>
-							</div>
-							<div class="review-footer">
-								<div class="footer-details-wrapper">
-									<span class="name">Wayne Young</span>
-									<div class="verified">
-										<span>Verified Order</span>
-										<img src="assets/images/verified.svg" />
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-			<div class="flex-grid">
-				<div class="column-12">
-					<div class="section-footer">
-						<div class="rounded-button white-button">
-							<a href="">Read more reviews</a>
-						</div>
-					</div>
-				</div>
+				<div class="column-2 md-column-0"></div>
 			</div>
 		</section>
 
-		<section class="blog-section">
+		<section class="generic-text-section">
 			<div class="flex-grid">
-				<div class="column-12">
-					<div class="section-header">
-						<h2>Latest Blog Posts</h2>
+				<div class="column-2 md-column-0"></div>
+				<div class="column-8 md-column-12">
+					<div class="content-container pad-h-2 pad-b-2">
+						<h2>Quality Aspects of The Sunglass Fix's Replacement Lenses</h2>
+						<p>They Perform: All our lenses are crafted from optically superb Polyamide or Polycarbonate material and are coated to give glass like optical clarity. Our SFx lenses are 60% lighter than glass and are much stronger. All our SFx polarised lenses and silver mirrored lenses have a Super Hydrophobic coating that makes cleaning and repelling water during strenuous activities a breeze. They stay clear so you can perform.</p>
+
+						<p>Safety: All of our lenses meet AS/NZS 1067:2003 and all other known regional quality and safety standards. They provide 100% UV protection so you know your eyes are being protected. The SFx Polycarbonate (PC Polarised and High Clarity) lenses are made from the same primary material used in bulletproof glass and safety goggles making the lenses virtually shatter proof. Our Ultimate lenses are some of the safest lenses on the market. However, they fall just short of the Industrial Safety standards required for safety glasses. Please note, frames also play a big factor in safety glasses. Safety lenses in fragile frames can make good sunglasses but may not provide safety required at the workplace.</p>
+
+						<p>Durability: All our lenses have undergone industry standard steel wool abrasion testing and rank between 600-800% higher than competitors retailing for well over $200 in the shops. While polycarbonate lenses still lag behind glass lenses in scratch protection, they do not break and will last for years if taken care of.</p>
+
+						<p>Value for our customers and the Environment: We strive to offer the best products at a fair price in the most convenient manner. This allows our customers to get new lenses while saving money and helping the environment. With over a billion pairs of sunglasses being sold every year, it's time to change the way we live and reuse perfectly good sunglass frames.</p>
+
+						<p>Colours and Choices: Get the lenses you want, not the ones that came with your sunglasses. We can fit most sunglasses with a choice of 13 different lenses.</p>
+
+						<p>Example of our sunglass replacement lens color selection</p>
 					</div>
 				</div>
-			</div>
-			<div class="blog-stories-wrapper">
-				<div class="flex-grid">
-					
-					<div class="column-3 lg-column-6 md-column-12">
-						<div class="blog-story">
-							<a href="">
-								<div class="blog-featured-image">
-									<img src="assets/images/blog-1.png" />
-								</div>
-								<div class="blog-body">
-									<h4>2019 Summer Sunglass Trends - What's Hot?</h4>
-									<span class="blog-date">August 10</span>
-								</div>
-							</a>
-						</div>
-					</div>
-
-					<div class="column-3 lg-column-6 md-column-12">
-						<div class="blog-story">
-							<a href="">
-								<div class="blog-featured-image">
-									<img src="assets/images/blog-2.png" />
-								</div>
-								<div class="blog-body">
-									<h4>Are Your Designer Sunglasses Real Or Fake</h4>
-									<span class="blog-date">August 10</span>
-								</div>
-							</a>
-						</div>
-					</div>
-
-					<div class="column-3 lg-column-6 md-column-12">
-						<div class="blog-story">
-							<a href="">
-								<div class="blog-featured-image">
-									<img src="assets/images/blog-3.png" />
-								</div>
-								<div class="blog-body">
-									<h4>The Best Way to Remove Scratches From Your Sunglasses</h4>
-									<span class="blog-date">August 10</span>
-								</div>
-							</a>
-						</div>
-					</div>
-
-					<div class="column-3 lg-column-6 md-column-12">
-						<div class="blog-story">
-							<a href="">
-								<div class="blog-featured-image">
-									<img src="assets/images/blog-4.png" />
-								</div>
-								<div class="blog-body">
-									<h4>The Best Sunglasses For Outdoor Activities</h4>
-									<span class="blog-date">August 10</span>
-								</div>
-							</a>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="flex-grid">
-				<div class="column-12">
-					<div class="section-footer">
-						<div class="rounded-button transparent-button">
-							<a href="">Read more</a>
-						</div>
-					</div>
-				</div>
+				<div class="column-2 md-column-0"></div>
 			</div>
 		</section>
+		
 
-			
 
-	</div> <!-- end main-content-wrapper -->
+	</div> <!-- end main wrapper -->
 
 	<!-- This is the site footer which is common accross all pages -->
 	<footer class="site-footer">
@@ -1241,11 +900,9 @@
 
 
 
+
 	<!-- Include jQuery -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-<!-- 	<script src="http://code.jquery.com/mobile/1.5.0-rc1/jquery.mobile-1.5.0-rc1.min.js"></script>
- -->
 	
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
 	
